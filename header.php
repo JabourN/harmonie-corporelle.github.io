@@ -17,7 +17,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Nutrition
+          Conseil
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Sondage</a></li>
@@ -30,6 +30,14 @@
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Explication</a></li>
           <li><a class="dropdown-item" href="#">Calcule</a></li>
+        </ul>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Forum
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Témoigner</a></li>
+          <li><a class="dropdown-item" href="#">Témoignage</a></li>
+          <li><a class="dropdown-item" href="#">Inscription</a></li>
         </ul>
 
       </div>
