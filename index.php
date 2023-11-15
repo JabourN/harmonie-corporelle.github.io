@@ -5,7 +5,7 @@
     $cheminImage = 'assets/images/ICONE_PODCAST.png';
 ?>
  <?php
-    $skillslist = new WP_Query([
+    $ = new WP_Query([
         'post_type' => 'skills',
     ]);
   ?>
