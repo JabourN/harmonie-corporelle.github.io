@@ -11,8 +11,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-  <?php wp_footer(); ?>
+  <?php include('nav.php'); ?>
+  <?php include('footer.php'); ?>
 </body>
 
 </html>

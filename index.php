@@ -1,2 +1,3 @@
 <!-- Accueil -->
-<?php include('head.php'); ?>
+<?php get_head(); ?>
+
