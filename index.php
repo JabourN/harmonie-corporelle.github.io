@@ -1,4 +1,5 @@
 <!-- Accueil -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.css">
-
 <?php get_header(); ?>
+<?php include('nav.php'); ?>
+<?php include('main.php'); ?>
+<?php include('footer.php'); ?>
