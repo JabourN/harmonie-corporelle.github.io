@@ -8,7 +8,7 @@
           <li><a class="dropdown-item" href="#">Conseil Expert</a></li>
         </ul>
 
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           IMC
         </a>
         <ul class="dropdown-menu">

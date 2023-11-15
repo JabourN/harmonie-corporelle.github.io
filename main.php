@@ -62,3 +62,24 @@ function carrousel(sign) {
     spinner.style.transform = "rotateY(" + angle + "deg)";
 }
 </script>
+
+<div class="card" style="width: 18rem;">
+  <img src="assets/images/testinsta.jpg" class="card-img-top" alt="Compte insta">
+  <div class="card-body">
+    <h5 class="card-title">Instagram</h5>
+    <p class="card-text">Suivez-nous sur instagram pour des infos en direct !</p>
+    <a href="https://instagram.com/harmonie.corporellee?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr" class="btn btn-primary">Click</a>
+  </div>
+  <img src="assets/images/testinsta.jpg" class="card-img-top" alt="Compte insta">
+  <div class="card-body">
+    <h5 class="card-title">Instagram</h5>
+    <p class="card-text">Suivez-nous sur instagram pour des infos en direct !</p>
+    <a href="https://instagram.com/harmonie.corporellee?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr" class="btn btn-primary">Click</a>
+  </div>
+  <img src="assets/images/testinsta.jpg" class="card-img-top" alt="Compte insta">
+  <div class="card-body">
+    <h5 class="card-title">Experts</h5>
+    <p class="card-text">Desirez-vous en savoir plus sur nos experts ?</p>
+    <a href="https://instagram.com/harmonie.corporellee?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr" class="btn btn-primary">Click</a>
+  </div>
+</div>
