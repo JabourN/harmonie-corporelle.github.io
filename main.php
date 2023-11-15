@@ -1,22 +1,12 @@
-<?php
-$firstImage = "imc-5.png";
-$secondImage = "Conseil.png";
-$thirdImage = "Forum.png";
 
-// Array of URLs corresponding to each image
-$imageUrls = [
-    "imc.php",
-    "conseil.php",
-    "forum.php"
-];
 ?>
 
 <main>
-    <div class="contenu-carrousel d-block w-100">
-        <div class="carrousel">
-            <div><a href="<?php echo $imageUrls[0]; ?>"><img src="assets/images/<?php echo $firstImage; ?>" alt="IMC"></a></div>
-            <div><a href="<?php echo $imageUrls[1]; ?>"><img src="assets/images/<?php echo $secondImage; ?>" alt="Conseil"></a></div>
-            <div><a href="<?php echo $imageUrls[2]; ?>"><img src="assets/images/<?php echo $thirdImage; ?>" alt="Forum"></a></div>
+    <div class="contenu-carrousel">
+        <div class="carrousel"  width="350">
+        <div><a href=""><img src="http://localhost:8888/harmonie-corporelle/wp-content/uploads/2023/11/imc-5.png"  width="682" alt="IMC"></a></div>
+        <div><a href=""><img src="http://localhost:8888/harmonie-corporelle/wp-content/uploads/2023/11/conseil-1.png" width="682" alt="Conseil"></a></div>
+        <div><a href=""><img src="http://localhost:8888/harmonie-corporelle/wp-content/uploads/2023/11/Forum.png" width="682" alt="Forum"></a></div>
         </div>
     </div>
     <div class="controle">

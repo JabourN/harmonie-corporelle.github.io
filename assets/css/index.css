@@ -22,8 +22,8 @@ button {
 
 .contenu-carrousel {
     margin: 5rem auto;
-    width: 300px;
-    height: 200px;
+    width: 682px;
+    height: 384px;
     position: relative;
     perspective: 1000px;
 }
@@ -40,8 +40,8 @@ button {
     backface-visibility: hidden;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 682px;
+    height: 384px;
     outline: 1px solid transparent;
 }
 
