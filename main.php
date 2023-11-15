@@ -31,25 +31,21 @@ function carrousel(sign) {
     var spinner = document.querySelector(".carrousel");
 
     if (!sign) {
-        angle = angle + 60;
+        angle -= 120;
         currentImage = (currentImage + 1) % images.length;
     } else {
-        angle = angle - 60;
+        angle += 120;
         currentImage = (currentImage - 1 + images.length) % images.length;
     }
 
-    spinner.setAttribute("style", "transform:rotateY(" + angle + "deg);");
+    spinner.style.transform = "rotateY(" + angle + "deg)";
     updateImage();
 }
 
 function updateImage() {
     var imageElements = document.querySelectorAll(".carrousel img");
     imageElements.forEach(function(element, index) {
-        if (index === currentImage) {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
+        element.style.display = index === currentImage ? "block" : "none";
     });
 }
 </script>
