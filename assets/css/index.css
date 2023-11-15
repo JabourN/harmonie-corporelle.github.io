@@ -1,3 +1,12 @@
+header{
+    background-color: #E9DFC6;
+}
+footer{
+    background-color: #757150 ;
+}
+body{
+    background-color: #E9DFC6;
+}
 .controle {
     display: grid;
     grid: 2rem / repeat(2, 1fr);

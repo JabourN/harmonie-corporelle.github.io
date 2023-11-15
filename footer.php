@@ -1,4 +1,5 @@
 <!-- footer -->
+<footer>
 <div class="container overflow-hidden text-center">
   <div class="row gy-5">
     <div class="col-6">
@@ -21,3 +22,4 @@
     </div>
   </div>
 </div>
+</footer>

@@ -12,6 +12,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+<header>
+    <a class="link-opacity-10" href="https://www.instagram.com/accounts/login/">
+        <img src="assets/images/ICONE_INSTAGRAM.png" alt="Icône Instagram" width="25">
+    <a class="link-opacity-10" href="https://www.pinterest.fr">
+        <img src="assets/images/ICONE_PINTEREST.png" alt="Icône Pinterest" width="25">
+    <a class="link-opacity-10" href="#">
+        <img src="assets/images/ICONE_PODCAST" alt="Icône podcast" width="25">
+        <img src="LOGO.PNG" alt="Logo">
+
+<h1>Harmonie corporelle  </h1>
+</header>
 </body>
 
 </html>

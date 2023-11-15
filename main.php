@@ -12,7 +12,7 @@ $imageUrls = [
 ?>
 
 <main>
-    <div class="contenu-carrousel">
+    <div class="contenu-carrousel d-block w-100">
         <div class="carrousel">
             <div><a href="<?php echo $imageUrls[0]; ?>"><img src="assets/images/<?php echo $firstImage; ?>" alt="IMC"></a></div>
             <div><a href="<?php echo $imageUrls[1]; ?>"><img src="assets/images/<?php echo $secondImage; ?>" alt="Conseil"></a></div>
