@@ -1,3 +1,4 @@
+<!-- header -->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,6 +13,7 @@
 
 <body <?php body_class(); ?>>
   <?php include('nav.php'); ?>
+  <?php include('main.php'); ?>
   <?php include('footer.php'); ?>
 </body>
 
