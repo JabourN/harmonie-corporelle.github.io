@@ -1,3 +1,5 @@
 <!-- forum -->
 <?php get_header(); ?>
-<?php include('footer.php'); ?>
+<?php get_nav(); ?>
+
+<?php get_footer() ?>
