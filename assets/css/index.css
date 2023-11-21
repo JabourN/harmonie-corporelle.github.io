@@ -3,10 +3,15 @@ header{
 }
 footer{
     background-color: #757150 ;
+    color: white;
 }
 body{
     background-color: #E9DFC6;
 }
 
-#c2carrousel{text-align:center;}
-#c2carrousel img{max-width:250px;max-height:250px;}
+nav{
+    background-color: #E9DFC6;
+}
+.dropdown-menu{
+    background-color: #757150 ;
+}
