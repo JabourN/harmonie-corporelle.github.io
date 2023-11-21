@@ -7,55 +7,6 @@ footer{
 body{
     background-color: #E9DFC6;
 }
-.controle {
-    display: grid;
-    grid: 2rem / repeat(2, 1fr);
-    place-items: center;
-}
 
-button {
-    font-size: 2rem;
-    border: none;
-    cursor: pointer;
-    background: #eee;
-}
-
-.contenu-carrousel {
-    margin: 5rem auto;
-    width: 682px;
-    height: 384px;
-    position: relative;
-    perspective: 1000px;
-}
-
-.carrousel {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-.carrousel div {
-    backface-visibility: hidden;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
-    position: absolute;
-    width: 682px;
-    height: 384px;
-    outline: 1px solid transparent;
-}
-
-.carrousel div:nth-child(1) {
-    transform: rotateY(0deg) translateZ(270px);
-    background: url("assets/images/<?php echo $firstImage; ?>") no-repeat center center/cover;
-}
-
-.carrousel div:nth-child(2) {
-    transform: rotateY(120deg) translateZ(270px);
-    background: url("assets/images/<?php echo $secondImage; ?>") no-repeat center center/cover;
-}
-
-.carrousel div:nth-child(3) {
-    transform: rotateY(240deg) translateZ(270px);
-    background: url("assets/images/<?php echo $thirdImage; ?>") no-repeat center center/cover;
-}
+#c2carrousel{text-align:center;}
+#c2carrousel img{max-width:250px;max-height:250px;}
