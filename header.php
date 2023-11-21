@@ -12,8 +12,10 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 <header>
+
+<!-- Les icônes -->
 <a class="icon-link" href="https://www.instagram.com/harmonie.corporellee/">
 <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICONE_INSTAGRAM.png ">
 </a>
@@ -23,8 +25,13 @@
 <a class="icon-link" href="#">
 <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICONE_PODCAST.png ">
 </a>
-</header>
 
+<!-- Le logo -->
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" 
+class="rounded mx-auto d-block" alt="LOGO">
+
+</header>
+<!-- Script de bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
-</html>
