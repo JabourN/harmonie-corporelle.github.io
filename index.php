@@ -38,6 +38,8 @@
 </nav>
 
 <!-- MAIN -->
+<main class="mx-auto">
+
 <!-- Partie 1 : Carrousel -->
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
@@ -71,8 +73,8 @@
 </div>
 
 <!-- Partie 2 : Card -->
-<div class="d-flex align-items-start"><div class="card d-block w-100">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/" class="card-img-top" alt="Ressources">
+<div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;"><div class="card">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
   <div class="card-body">
     <h3 class="card-title">Ressources</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -82,7 +84,7 @@
 
 <div class="mx-auto p-2" style="height: 100px;"></div>
 <div class="card">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/" class="card-img-top" alt="Instagram">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Instagram">
   <div class="card-body">
     <h3 class="card-title">Instagram</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -92,7 +94,7 @@
 
 <div class="mx-auto p-2" style="height: 100px;"></div>
 <div class="card">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/" class="card-img-top" alt="Experts">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Experts">
   <div class="card-body">
     <h3 class="card-title">Experts</h3>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -102,5 +104,34 @@
 </div>
 </div>
 
+<!-- Partie 3 : Audio & book -->
+<div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;">
+<div class="card">
+  <h5 class="card-header">Ressources</h5>
+  <div class="card-body">
+    <h5 class="card-title">PODCAST</h5>
+    <p class="card-text">With supporting text below as a natural l
+    <audio controls> <source src="chemin/vers/votre/fichier-audio.mp3" type="audio/mp3"> </audio>
+
+</div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
+    </div>
+    <div class="col-md-8">
+    <h5 class="card-header">Ressources</h5>
+      <div class="card-body">
+        <h5 class="card-title">LIVRE</h5>
+        <p class="card-text">Découvrez en plus sur le livre, et plein d'autres.</p>
+        <p class="card-text"><small class="text-body-secondary"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
 </body>
 <?php get_footer() ?>
