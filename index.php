@@ -41,6 +41,7 @@
 <main class="mx-auto">
 
 <!-- Partie 1 : Carrousel -->
+<div class="d-flex p-2">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -71,8 +72,9 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+</div>
 <!-- Partie 2 : Card -->
+<div class="d-flex p-2">
 <div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;"><div class="card">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
   <div class="card-body">
@@ -103,8 +105,9 @@
 </div>
 </div>
 </div>
-
-<!-- Partie 3 : Audio & book -->
+</div>
+<!-- Partie 3 : Audio & book !!!! RAJOUTER DES COLONNES PARCE QUE C'EST LAID !!!-->
+<div class="d-flex p-2">
 <div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;">
 <div class="card">
   <h5 class="card-header">Ressources</h5>
@@ -122,7 +125,7 @@
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
     </div>
     <div class="col-md-8">
-    <h5 class="card-header">Ressources</h5>
+    <h5 class="card-header">.....</h5>
       <div class="card-body">
         <h5 class="card-title">LIVRE</h5>
         <p class="card-text">Découvrez en plus sur le livre, et plein d'autres.</p>
@@ -131,7 +134,7 @@
     </div>
   </div>
 </div>
-
+</div>
 </main>
 </body>
 <?php get_footer() ?>
