@@ -110,25 +110,26 @@
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/casque.jpg" class="img-fluid rounded-start" alt="IMC">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/casque.png" style="width: 500px; class="img-fluid rounded-start" alt="Casque">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Explorez chaque jour nos podcasts thématiques. Découvrez des sujets enrichissants sur la nutrition, les bonnes habitudes et le bien-être. Que vous cherchiez à améliorer vos habitudes alimentaires, à trouver l'équilibre émotionnel, ou à cultiver un mode de vie sain, nos podcasts sont conçus pour vous accompagner au quotidien.</p>
+        <h5 class="card-title">PODCAST</h5>
+        <p class="card-text text-center">Explorez chaque jour nos podcasts thématiques. Découvrez des sujets enrichissants sur la nutrition, les bonnes habitudes et le bien-être. Que vous cherchiez à améliorer vos habitudes alimentaires, à trouver l'équilibre émotionnel, ou à cultiver un mode de vie sain, nos podcasts sont conçus pour vous accompagner au quotidien.</p>
       </div>
     </div>
   </div>
 </div>
-<div class="row g-0">
-    <div class="col-md-4">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/casque.jpg" class="img-fluid rounded-start" alt="IMC">
-    </div>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card text-end">Explorez chaque jour nos podcasts thématiques. Découvrez des sujets enrichissants sur la nutrition, les bonnes habitudes et le bien-être. Que vous cherchiez à améliorer vos habitudes alimentaires, à trouver l'équilibre émotionnel, ou à cultiver un mode de vie sain, nos podcasts sont conçus pour vous accompagner au quotidien.</p>
+        <h5 class="card-title">LIVRES</h5>
+        <p class="card-text text-center">Découvrez notre collection quotidienne de livres soigneusement sélectionnés pour cultiver votre bien-être. Chaque jour, plongez dans des pages riches en conseils, en inspirations et en connaissances pour nourrir votre esprit. Des ouvrages sur la nutrition équilibrée aux guides pratiques pour des habitudes de vie saines</p>
       </div>
+    </div>
+    <div class="col-md-4">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/livre.png" style="width: 500px; class="img-fluid rounded-start"  alt="Livre" >
     </div>
   </div>
 </div>
