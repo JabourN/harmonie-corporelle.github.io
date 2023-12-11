@@ -107,33 +107,30 @@
 </div>
 </div>
 <!-- Partie 3 : Audio & book !!!! RAJOUTER DES COLONNES PARCE QUE C'EST LAID !!!-->
-<div class="d-flex p-2">
-<div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;">
-<div class="card">
-  <h5 class="card-header">Ressources</h5>
-  <div class="card-body">
-    <h5 class="card-title">PODCAST</h5>
-    <p class="card-text">With supporting text below as a natural l
-    <audio controls> <source src="chemin/vers/votre/fichier-audio.mp3" type="audio/mp3"> </audio>
-
-</div>
-</div>
-
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/casque.jpg" class="img-fluid rounded-start" alt="IMC">
     </div>
     <div class="col-md-8">
-    <h5 class="card-header">.....</h5>
       <div class="card-body">
-        <h5 class="card-title">LIVRE</h5>
-        <p class="card-text">Découvrez en plus sur le livre, et plein d'autres.</p>
-        <p class="card-text"><small class="text-body-secondary"></p>
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Explorez chaque jour nos podcasts thématiques. Découvrez des sujets enrichissants sur la nutrition, les bonnes habitudes et le bien-être. Que vous cherchiez à améliorer vos habitudes alimentaires, à trouver l'équilibre émotionnel, ou à cultiver un mode de vie sain, nos podcasts sont conçus pour vous accompagner au quotidien.</p>
       </div>
     </div>
   </div>
 </div>
+<div class="row g-0">
+    <div class="col-md-4">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/casque.jpg" class="img-fluid rounded-start" alt="IMC">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card text-end">Explorez chaque jour nos podcasts thématiques. Découvrez des sujets enrichissants sur la nutrition, les bonnes habitudes et le bien-être. Que vous cherchiez à améliorer vos habitudes alimentaires, à trouver l'équilibre émotionnel, ou à cultiver un mode de vie sain, nos podcasts sont conçus pour vous accompagner au quotidien.</p>
+      </div>
+    </div>
+  </div>
 </div>
 </main>
 </body>
