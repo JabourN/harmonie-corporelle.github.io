@@ -41,7 +41,10 @@
 <main class="mx-auto">
 
 <!-- Partie 1 : Carrousel -->
-<div class="d-flex p-2">
+<div class="container">
+  <div class="row row-cols-auto">
+    <div class="col">
+  <div class="d-flex p-2">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -73,40 +76,42 @@
   </button>
 </div>
 </div>
+    </div>
+
 <!-- Partie 2 : Card -->
-<div class="d-flex p-2">
+
+<div class="container">
 <div class="d-flex align-items-start mx-auto d-block w-100" style="max-width: 950px; padding-left: 10px; padding-right: 10px;"><div class="card">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Ressources">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ressources.png" class="card-img-top" alt="Ressources">
   <div class="card-body">
-    <h3 class="card-title">Ressources</h3>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Découvrir</a>
+    <p class="card-text">Explorez nos ressources quotidiennes, des podcasts motivants, des livres inspirants et des vidéos éducatives</p>
+    <a href="#" class="btn btn-success">Découvrir</a>
 </div>
 </div>
 
 <div class="mx-auto p-2" style="height: 100px;"></div>
 <div class="card">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Instagram">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" class="card-img-top" alt="Instagram">
   <div class="card-body">
-    <h3 class="card-title">Instagram</h3>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://www.instagram.com" class="btn btn-primary">Découvrir</a>
+    <p class="card-text">Rencontrez nos experts dédiés, prêts à vous accompagner dans votre parcours vers une vie plus saine et équilibrée.</p>
+    <a href="https://www.instagram.com" class="btn btn-success">Découvrir</a>
 </div>
 </div>
 
 <div class="mx-auto p-2" style="height: 100px;"></div>
 <div class="card">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photo.jpg" class="card-img-top" alt="Experts">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/experts.png" class="card-img-top" alt="Experts">
   <div class="card-body">
-    <h3 class="card-title">Experts</h3>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Découvrir</a>
+    <p class="card-text">Suivez-nous sur Instagram pour des doses supplémentaires d'inspiration, des astuces bien-être et des moments motivants.</p>
+    <a href="#" class="btn btn-success">Découvrir</a>
 
 </div>
 </div>
 </div>
 </div>
 <!-- Partie 3 : Audio & book !!!! RAJOUTER DES COLONNES PARCE QUE C'EST LAID !!!-->
+
+
 <div class="container card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
