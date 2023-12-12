@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <body>
 <!-- Partie 1 : Carrousel -->
 <div class="container">
@@ -14,7 +15,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
     <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc1.png" class="d-block w-100" alt="Conseil">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc1.png" class="d-block w-100" alt="photo de femme en sous vêtement">
     </a>
     </div>
     <div class="carousel-item">
@@ -40,86 +41,6 @@
 
 <!-- Partie 2 : Calculatrice -->
 
-<style>
-    #container {
-    color: black;
-    max-width: 800px;
-    width: 100%;
-    background-color: #6a6e4b;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Ajout pour centrer le conteneur */
-}
-
-        h3 {
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 10px;
-        }
-
-        input {
-            width: 100px;
-            background-color: #6a6e4b;
-        }
-
-        button {
-            padding: 5px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        thead {
-            background-color: #f2f2f2;
-        }
-
-        textarea {
-            width: 100%;
-            margin-top: 10px;
-        }
-    #btn {
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    min-width: 150px; /* Ajout de la largeur minimale */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-#corpullence{
-  width: 400px;
-  background-color: #6a6e4b;
-}
-#poids, #taille{
-  background-color: #fff;
-
-}
-    </style>
-</head>
 <body>
     <div id="container">
         <h3>⚖️ Calcualtrice de l'IMC :</h3>
@@ -269,11 +190,6 @@ function now(id) {
     }, 1000);
 }
     </script>
-
-  
-
-<!-- Reste du code HTML/PHP -->
-
 </body>
 
 
