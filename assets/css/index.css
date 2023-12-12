@@ -6,12 +6,12 @@ footer{
     color: white;
 }
 body{
-    background-color: #131008;
+    background-color: #E9DFC6;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-nav{
+.navbar{
     background-color: #E9DFC6;
     display: flex;
     justify-content: space-around;
@@ -22,8 +22,4 @@ nav{
     background-color: #757150 ;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-}
 

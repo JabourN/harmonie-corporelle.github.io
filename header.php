@@ -41,7 +41,7 @@ class="rounded mx-auto d-block" alt="LOGO">
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg justify-content-center">
     <div class="container-fluid">
         <ul class="nav justify-content-center">
             <li class="nav-item">
