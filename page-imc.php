@@ -40,154 +40,17 @@
 
 <!-- Partie 2 : Calculatrice -->
 
-
-    <h3>⚖️ Calcualtrice de l'IMC :</h3>
-    <p>Entrez votre poids (en kg)
-        <input id="poids">
-    </p>
-    <p>Entrez votre taille (en cm)
-        <input id="taille">
-        <button onclick="AfficheImc()">Calculer</button>
-    </p>
-    <p>
-        <div>
-            Avec un poids de <input type="text" id="Lepoids" disabled="disabled"/> kilos et une taille de 
-            <input type="text" id="Lataille" disabled="disabled"/> mètres, votre indice de masse corporelle 
-            est <b><input type="text" id="imc" disabled="disabled"/></b> et
-            <i><input type="text" id="corpullence" disabled="disabled"/></i>
-        </div>
-    </p>
-    <br> 
-    <table>
-        <thead>
-            <tr>
-                <th>Poids Maximum</th>
-                <th>&emsp;Description</th>
-            </tr> 
-            <tbody>
-            <tr>
-                <td><input type="text" id="Dénutrition" disabled="disabled"/></td>
-                <td>&emsp;Dénutrition</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="Maigreur" disabled="disabled"></td>
-                <td>&emsp;Maigreur</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="Poidnormal" disabled="disabled"></td>
-                <td>&emsp;Poids normal</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="Surpoids" disabled="disabled"></td>
-                <td>&emsp;Surpoids</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="Obésitémodérée" disabled="disabled"></td>
-                <td>&emsp;Obésité modérée</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="Obésitésévère" disabled="disabled"></td>
-                <td>&emsp;Obésité sévère</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="ObésitéMorbideOuMassiv" disabled="disabled"></td>
-                <td>&emsp;Obésité morbide ou massive</td>
-            </tr> 
-        </tbody>
-    </table>
-
-
-    <span id="now"></span>
-    <p id="greeting"></p>
-
-    <textarea id="text" disabled="disabled">Note la date, ton poids, ta taille, ton imc pour visualiser évolution :</textarea>
-    <br />
-    <i><input type="button" id="btn" value="Sauvegarde" /></i>
-
-    <script>
-        document.getElementById("btn").addEventListener("click", function () {
-            var text = document.getElementById("text").value;
-            var filename = "SB&B_evolution.txt";
-            var element = document.createElement('a');
-            element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
-        }, false);
-
-        function now(id) {
-            var date = new Date();
-            var day = date.getDate();
-            var month = date.getMonth() + 1; // January is 0
-            var year = date.getFullYear();
-            var hours = date.getHours();
-            var minutes = date.getMinutes();
-
-            var result = 'Date: ' + day + '/' + month + '/' + year + ' - Time: ' + hours + ':' + minutes;
-            document.getElementById(id).innerHTML = result;
-            setTimeout(function() { now(id); }, 1000);
-        }
-
-        window.onload = function() {
-            now('now');
-        };
-
-        function AfficheImc() {
-            var poids = parseFloat(document.getElementById("poids").value);
-            var taille = parseFloat(document.getElementById("taille").value) / 100; // Convertir en mètres
-            var imc = poids / (taille * taille);
-            var Lataille = taille;
-            var Lepoids = poids;
-
-            document.getElementById("imc").value = imc.toFixed(2);
-            document.getElementById("Lataille").value = Lataille.toFixed(2);
-            document.getElementById("Lepoids").value= Lepoids.toFixed(2);
-
-            var corpullence = imc.toFixed(2);
-
-            if (corpullence <= 16.5) {
-                document.getElementById("corpullence").value = 'vous êtes en dénutrition.';
-            } else if (corpullence <= 18.5) {
-                document.getElementById("corpullence").value = 'vous êtes en maigreur.';
-            } else if (corpullence <= 25) {
-                document.getElementById("corpullence").value = 'vous avez un poids normal.';
-            } else if (corpullence <= 30) {
-                document.getElementById("corpullence").value = 'vous êtes en surpoids.';
-            } else if (corpullence <= 35) {
-                document.getElementById("corpullence").value = 'vous êtes en obésité modérée.';
-            } else if (corpullence <= 40) {
-                document.getElementById("corpullence").value = ' vous êtes en obésité sévère.';
-            } else {
-                document.getElementById("corpullence").value = 'vous êtes en obésité morbide ou massive.';
-            }
-
-            var Dénutrition  = "Moins de " + Math.floor((16.5) * (taille * taille));
-            document.getElementById("Dénutrition").value = Dénutrition;
-
-            var Maigreur  = "De " + Math.floor((16.5) * (taille * taille)) + " à " + Math.floor((18.5) * (taille * taille));
-            document.getElementById("Maigreur").value = Maigreur;
-
-            var Poidnormal = "De " + Math.floor((18.5) * (taille * taille)) + " à " + Math.floor((25) * (taille * taille));
-        document.getElementById("Poidnormal").value = Poidnormal;
-
-        var Surpoids = "De " + Math.floor((25) * (taille * taille)) + " à " + Math.floor((30) * (taille * taille));
-        document.getElementById("Surpoids").value = Surpoids;
-
-        var Obésitémodérée = "De " + Math.floor((30) * (taille * taille)) + " à " + Math.floor((35) * (taille * taille));
-        document.getElementById("Obésitémodérée").value = Obésitémodérée;
-
-        var Obésitésévère = "De " + Math.floor((35) * (taille * taille)) + " à " + Math.floor((40) * (taille * taille));
-        document.getElementById("Obésitésévère").value = Obésitésévère;
-
-        var ObésitéMorbideOuMassiv = "Plus de " + Math.floor((40) * (taille * taille));
-        document.getElementById("ObésitéMorbideOuMassiv").value = ObésitéMorbideOuMassiv;        }
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+<style>
+    #container {
+    color: black;
+    max-width: 800px;
+    width: 100%;
+    background-color: #6a6e4b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Ajout pour centrer le conteneur */
+}
 
         h3 {
             color: #333;
@@ -198,7 +61,8 @@
         }
 
         input {
-            width: 60px;
+            width: 100px;
+            background-color: #6a6e4b;
         }
 
         button {
@@ -217,8 +81,6 @@
 
         table, th, td {
             border: 1px solid #ddd;
-            background-color: #4CAF50;
-
         }
 
         th, td {
@@ -234,20 +96,181 @@
             width: 100%;
             margin-top: 10px;
         }
+    #btn {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    min-width: 150px; /* Ajout de la largeur minimale */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#corpullence{
+  width: 400px;
+  background-color: #6a6e4b;
+}
+#poids, #taille{
+  background-color: #fff;
 
-        #btn {
-            margin-top: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-        }
+}
     </style>
+</head>
+<body>
+    <div id="container">
+        <h3>⚖️ Calcualtrice de l'IMC :</h3>
+        <p>Entrez votre poids (en kg)
+            <input id="poids">
+        </p>
+        <p>Entrez votre taille (en cm)
+            <input id="taille">
+            <button onclick="AfficheImc()">Calculer</button>
+        </p>
+        <p>
+            <div>
+                Avec un poids de <input type="text" id="Lepoids" disabled="disabled"/> kilos et une taille de 
+                <input type="text" id="Lataille" disabled="disabled"/> mètres, votre indice de masse corporelle 
+                est <b><input type="text" id="imc" disabled="disabled"/></b> et
+                <i><input type="text" id="corpullence" disabled="disabled"/></i>
+            </div>
+        </p>
+        <br> 
+        <table>
+            <thead>
+                <tr>
+                    <th>Poids Maximum</th>
+                    <th>&emsp;Description</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="Dénutrition" disabled="disabled"/></td>
+                    <td>&emsp;Dénutrition</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="Maigreur" disabled="disabled"></td>
+                    <td>&emsp;Maigreur</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="Poidnormal" disabled="disabled"></td>
+                    <td>&emsp;Poids normal</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="Surpoids" disabled="disabled"></td>
+                    <td>&emsp;Surpoids</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="Obésitémodérée" disabled="disabled"></td>
+                    <td>&emsp;Obésité modérée</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="Obésitésévère" disabled="disabled"></td>
+                    <td>&emsp;Obésité sévère</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ObésitéMorbideOuMassiv" disabled="disabled"></td>
+                    <td>&emsp;Obésité morbide ou massive</td>
+                </tr> 
+            </tbody>
+        </table>
+
+        <span id="now"></span>
+        <p id="greeting"></p>
+
+        <textarea id="text" disabled="disabled">Note la date, ton poids, ta taille, ton imc pour visualiser évolution :</textarea>
+        <br />
+        <i><input type="button" id="btn" value="Sauvegarde" /></i>
+
+    <script>
+function AfficheImc() {
+    var poids = Number(document.getElementById("poids").value);
+    var taille = Number(document.getElementById("taille").value);
+    var imc = poids / (taille * taille);
+
+    var Lataille = taille * 1;
+    var Lepoids = poids * 1;
+
+    document.getElementById("imc").value = imc.toFixed(2);
+    document.getElementById("Lataille").value = Lataille;
+    document.getElementById("Lepoids").value = Lepoids;
+    
+    corpullence = imc*1;
+
+if (corpullence <= 16.5) {
+    document.getElementById("corpullence").value = corpullence ='vous êtes en dénutrition.';
+}else if(corpullence <= 18.5){
+    document.getElementById("corpullence").value = corpullence ='vous êtes en maigreur.';
+}else if(corpullence <= 25){
+    document.getElementById("corpullence").value = corpullence = 'vous avez un poids normal.';
+}else if(corpullence <= 30){
+    document.getElementById("corpullence").value = corpullence = 'vous êtes en surpoids.';
+}else if(corpullence <= 35){
+    document.getElementById("corpullence").value = corpullence = 'vous êtes en obésité modérée.';
+}else if(corpullence <= 40){
+    document.getElementById("corpullence").value = corpullence = ' vous êtes en obésité sévère.';
+    }else{
+        document.getElementById("corpullence").value = corpullence = 'vous êtes en obésité morbide ou massive.';
+}
+
+
+    document.getElementById("imc").value = imc.toFixed(2);
+
+    highlightRow("Dénutrition", imc <= 16.5);
+    highlightRow("Maigreur", imc > 16.5 && imc <= 18.5);
+    highlightRow("Poidnormal", imc > 18.5 && imc <= 25);
+    highlightRow("Surpoids", imc > 25 && imc <= 30);
+    highlightRow("Obésitémodérée", imc > 30 && imc <= 35);
+    highlightRow("Obésitésévère", imc > 35 && imc <= 40);
+    highlightRow("ObésitéMorbideOuMassiv", imc > 40);
+
+    document.getElementById("Dénutrition").value = "Moins de " + Math.floor(16.5 * (taille * taille));
+    document.getElementById("Maigreur").value = "De " + Math.floor(16.5 * (taille * taille)) + " à " + Math.floor(18.5 * (taille * taille));
+    document.getElementById("Poidnormal").value = "De " + Math.floor(18.5 * (taille * taille)) + " à " + Math.floor(25 * (taille * taille));
+    document.getElementById("Surpoids").value = "De " + Math.floor(25 * (taille * taille)) + " à " + Math.floor(30 * (taille * taille));
+    document.getElementById("Obésitémodérée").value = "De " + Math.floor(30 * (taille * taille)) + " à " + Math.floor(35 * (taille * taille));
+    document.getElementById("Obésitésévère").value = "De " + Math.floor(35 * (taille * taille)) + " à " + Math.floor(40 * (taille * taille));
+    document.getElementById("ObésitéMorbideOuMassiv").value = "Plus de " + Math.floor(40 * (taille * taille));
+}
+
+function highlightRow(rowId, shouldHighlight) {
+    var row = document.getElementById(rowId);
+    if (shouldHighlight) {
+        row.style.backgroundColor = '#FF66B2'; // Rose fluo
+    } else {
+        row.style.backgroundColor = ''; // Réinitialiser la couleur de fond
+    }
+}
+
+function now(id) {
+    var date = new Date();
+    var annee = date.getFullYear();
+    var moi = date.getMonth();
+    var jours = ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'];
+    var jour = date.getDay();
+    var h = date.getHours();
+    var m = date.getMinutes();
+
+    if (h < 10) {
+        h = "0" + h;
+    }
+
+    if (m < 10) {
+        m = "0" + m;
+    }
+
+    var resultat = '' + jours[jour] + ':' + date.getDate() + '/' + ('0' + (moi + 1)).slice(-2) + '/' + annee + ' - ' + h + ':' + m;
+    document.getElementById(id).innerHTML = resultat;
+    setTimeout(function () {
+        now(id);
+    }, 1000);
+}
+    </script>
+
+  
 
 <!-- Reste du code HTML/PHP -->
 
