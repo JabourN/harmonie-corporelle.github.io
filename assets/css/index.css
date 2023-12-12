@@ -1,0 +1,38 @@
+header{
+    background-color: #E9DFC6;
+}
+footer{
+    background-color: #757150 ;
+    color: white;
+}
+body{
+    background-color: #E9DFC6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav{
+    background-color: #E9DFC6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.dropdown-menu{
+    background-color: #757150 ;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
