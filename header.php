@@ -12,6 +12,8 @@
 
 <body <?php body_class(); ?> >
 <header>
+  
+<!-- Les icônes -->
 <div class="container">
   <div class="row row-cols-auto">
     <div class="col">
@@ -31,10 +33,10 @@
     </div>
   </div>
 </div>
-<!-- Les icônes -->
+
 
 <!-- Le logo -->
-<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" 
+<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
 class="rounded mx-auto d-block" alt="LOGO">
 
 <!-- NAVBAR -->
