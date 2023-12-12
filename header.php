@@ -12,20 +12,32 @@
 
 <body <?php body_class(); ?> >
 <header>
-
+<div class="container">
+  <div class="row row-cols-auto">
+    <div class="col">
+      <a class="icon-link" href="https://www.instagram.com/harmonie.corporellee/">
+<img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_INSTAGRAM.png ">
+</a>
+    </div>
+    <div class="col">
+     <a class="icon-link" href="https://pin.it/7KwgCRX">
+<img width="25" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_PINTEREST.png ">
+</a> 
+    </div>
+    <div class="col">
+     <a class="icon-link" href="#">
+<img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_PODCAST.png ">
+</a> 
+    </div>
+  </div>
+</div>
 <!-- Les icônes -->
-<a class="icon-link" href="https://www.instagram.com/harmonie.corporellee/">
-<img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICONE_INSTAGRAM.png ">
-</a>
-<a class="icon-link" href="https://pin.it/7KwgCRX">
-<img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICONE_PINTEREST.png ">
-</a>
-<a class="icon-link" href="#">
-<img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICONE_PODCAST.png ">
-</a>
+
+
+
 
 <!-- Le logo -->
-<img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" 
+<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" 
 class="rounded mx-auto d-block" alt="LOGO">
 
 <!-- NAVBAR -->
