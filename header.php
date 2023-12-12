@@ -12,6 +12,8 @@
 
 <body <?php body_class(); ?> >
 <header>
+  
+<!-- Les icônes -->
 <div class="container">
   <div class="row row-cols-auto">
     <div class="col">
@@ -31,7 +33,7 @@
     </div>
   </div>
 </div>
-<!-- Les icônes -->
+
 
 
 
