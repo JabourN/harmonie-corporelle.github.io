@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-<?php // get_nav(); ?>
-  <h1> hello </h1>
+<button type="button" class="btn btn-secondary">Résultats</button>
 
 
 
