@@ -1,7 +1,4 @@
 <?php get_header(); ?> 
-
-
-
 <!-- MAIN -->
 <main class="mx-auto">
 
@@ -74,9 +71,8 @@
 </div>
 </div>
 </div>
+
 <!-- Partie 3 : Audio & book !!!! RAJOUTER DES COLONNES PARCE QUE C'EST LAID !!!-->
-
-
 <div class="container card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">

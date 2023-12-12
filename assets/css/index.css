@@ -6,7 +6,7 @@ footer{
     color: white;
 }
 body{
-    background-color: #E9DFC6;
+    background-color: #131008;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -22,17 +22,13 @@ nav{
     background-color: #757150 ;
 }
 
-
 .navbar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
 }
 
 .navbar-nav {
-    text-align: center;
-}
-
-.navbar-nav .nav-item {
-    margin: 0 15px;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
 }
