@@ -39,7 +39,7 @@
 
 
 <!-- Le logo -->
-<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" 
+<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
 class="rounded mx-auto d-block" alt="LOGO">
 
 <!-- NAVBAR -->
