@@ -44,7 +44,7 @@
 <div class="text-center">
     <a href="<?php echo home_url(); ?>">
         <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
-        alt="Brand logo | <?php bloginfo('title'); ?>" style="max-width: 100px; height: auto;" />
+        alt="Brand logo | <?php bloginfo('title'); ?>" style="max-width: 170px; height: auto;" />
     </a>
 </div>
 
