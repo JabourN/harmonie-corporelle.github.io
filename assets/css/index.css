@@ -22,9 +22,13 @@ body{
     background-color: #757150 ;
 }
 
+.logo-img {
+    width: 20px; 
+    height: 20px; 
+}
 
 
-/* PAGE DE IMC */
+/* PAGE D'IMC */
 #container {
     color: black;
     max-width: 800px;
@@ -103,3 +107,4 @@ body{
   background-color: #fff;
 
 }
+
