@@ -50,7 +50,6 @@
 
 
 <!-- NAVBAR -->
-<<<<<<< HEAD
 
 <nav class="navbar navbar-expand-lg justify-content-center">
     <div class="container-fluid">
