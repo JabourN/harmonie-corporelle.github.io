@@ -6,8 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-  rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
      <title><?php bloginfo('harmonie-corporelle'); ?></title>
 
   <?php wp_head(); ?>
@@ -42,10 +41,9 @@
 
 
 <!-- Le logo -->
-<a class="logo" href="http://localhost:8888/harmonie-corporelle/forum-2/">
 <img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
 class="rounded mx-auto d-block" alt="LOGO">
-</a>
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
