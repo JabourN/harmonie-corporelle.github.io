@@ -11,22 +11,6 @@ body{
     font-family: Arial, sans-serif;
 }
 
-.navbar{
-    background-color: #E9DFC6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-.dropdown-menu{
-    background-color: #757150 ;
-}
-
-.logo-img {
-    width: 20px; 
-    height: 20px; 
-}
-
 
 /* PAGE D'IMC */
 #container {
@@ -55,10 +39,11 @@ body{
 
         button {
             padding: 5px 10px;
-            background-color: #4CAF50;
+            background-color: #403929;
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
         }
 
         table {
@@ -107,4 +92,6 @@ body{
   background-color: #fff;
 
 }
-
+#Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère,#ObésitéMorbideOuMassiv {
+    width: 400px;
+}
