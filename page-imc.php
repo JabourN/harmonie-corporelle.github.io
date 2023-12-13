@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<body>
+<main class="mx-auto">
 <!-- Partie 1 : Carrousel -->
 <div class="container">
   <div class="row row-cols-auto">
@@ -40,8 +40,11 @@
     </div>
 
 <!-- Partie 2 : Calculatrice -->
+<p>L'Indice de Masse Corporelle (IMC) est bien plus qu'un simple chiffre. Il est le reflet de notre équilibre physique, un indicateur essentiel dans notre quête d'harmonie corporelle. Calculé à partir de notre poids et de notre taille, l'IMC offre un aperçu global de notre santé physique.
 
-<body>
+Cependant, l'harmonie corporelle va au-delà des chiffres. Elle s'enracine dans les bonnes habitudes et une nutrition équilibrée. Adopter des choix alimentaires judicieux, pratiquer une activité physique régulière et cultiver une relation positive avec notre corps contribuent à créer cet équilibre tant recherché.
+
+Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devient un compagnon, non pas de jugement, mais de compréhension. Ensemble, cultivons des habitudes saines, embrassons la nutrition éclairée, et célébrons la diversité des chemins menant à une vie équilibrée et épanouissante.</p>
     <div id="container">
         <h3>Calculatrice de l'IMC :</h3>
         <p>Entrez votre poids (en kg)
@@ -99,15 +102,69 @@
             </tbody>
         </table>
 
-        <span id="now"></span>
-        <p id="greeting"></p>
-
-        <textarea id="text" disabled="disabled">Note la date, ton poids, ta taille, ton imc pour visualiser évolution :</textarea>
         <br />
-        <i><input type="button" id="btn" value="Sauvegarde" /></i>
+ <i><input type="button" id="btn" value="Sauvegarde" /></i>
 
-        <script src="imc.js"></script>
-</body>
+        <script> 
+function AfficheImc() {
+    var poids = Number(document.getElementById("poids").value);
+    var taille = Number(document.getElementById("taille").value);
+    var imc = poids / (taille * taille);
+
+    var Lataille = taille * 1;
+    var Lepoids = poids * 1;
+
+    document.getElementById("imc").value = imc.toFixed(2);
+    document.getElementById("Lataille").value = Lataille;
+    document.getElementById("Lepoids").value = Lepoids;
+    
+    corpullence = imc*1;
+
+if (corpullence <= 16.5) {
+    document.getElementById("corpullence").value = corpullence ='vous êtes en dénutrition.';
+}else if(corpullence <= 18.5){
+    document.getElementById("corpullence").value = corpullence ='vous êtes en maigreur.';
+}else if(corpullence <= 25){
+    document.getElementById("corpullence").value = corpullence = 'vous avez un poids normal.';
+}else if(corpullence <= 30){
+    document.getElementById("corpullence").value = corpullence = 'vous êtes en surpoids.';
+}else if(corpullence <= 35){
+    document.getElementById("corpullence").value = corpullence = 'vous êtes en obésité modérée.';
+}else if(corpullence <= 40){
+    document.getElementById("corpullence").value = corpullence = ' vous êtes en obésité sévère.';
+    }else{
+        document.getElementById("corpullence").value = corpullence = 'vous êtes en obésité morbide ou massive.';
+}
 
 
-          
+    document.getElementById("imc").value = imc.toFixed(2);
+
+    highlightRow("Dénutrition", imc <= 16.5);
+    highlightRow("Maigreur", imc > 16.5 && imc <= 18.5);
+    highlightRow("Poidnormal", imc > 18.5 && imc <= 25);
+    highlightRow("Surpoids", imc > 25 && imc <= 30);
+    highlightRow("Obésitémodérée", imc > 30 && imc <= 35);
+    highlightRow("Obésitésévère", imc > 35 && imc <= 40);
+    highlightRow("ObésitéMorbideOuMassiv", imc > 40);
+
+    document.getElementById("Dénutrition").value = "Moins de " + Math.floor(16.5 * (taille * taille));
+    document.getElementById("Maigreur").value = "De " + Math.floor(16.5 * (taille * taille)) + " à " + Math.floor(18.5 * (taille * taille));
+    document.getElementById("Poidnormal").value = "De " + Math.floor(18.5 * (taille * taille)) + " à " + Math.floor(25 * (taille * taille));
+    document.getElementById("Surpoids").value = "De " + Math.floor(25 * (taille * taille)) + " à " + Math.floor(30 * (taille * taille));
+    document.getElementById("Obésitémodérée").value = "De " + Math.floor(30 * (taille * taille)) + " à " + Math.floor(35 * (taille * taille));
+    document.getElementById("Obésitésévère").value = "De " + Math.floor(35 * (taille * taille)) + " à " + Math.floor(40 * (taille * taille));
+    document.getElementById("ObésitéMorbideOuMassiv").value = "Plus de " + Math.floor(40 * (taille * taille));
+}
+
+function highlightRow(rowId, shouldHighlight) {
+    var row = document.getElementById(rowId);
+    if (shouldHighlight) {
+        row.style.backgroundColor = '#CAAF6F'; // Beige foncé
+    } else {
+        row.style.backgroundColor = ''; // Réinitialiser la couleur de fond
+    }
+}
+</script>
+</main>
+     
+<?php get_footer() ?>
