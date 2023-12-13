@@ -41,15 +41,22 @@
 
 
 <!-- Le logo -->
-<img width="150" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
-class="rounded mx-auto d-block" alt="LOGO">
+<div class="text-center">
+    <a href="<?php echo home_url(); ?>">
+        <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
+        alt="Brand logo | <?php bloginfo('title'); ?>" style="max-width: 100px; height: auto;" />
+    </a>
+</div>
+
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">ACCUEIL</a>
-            
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<<<<<<< HEAD
+
+<nav class="navbar navbar-expand-lg justify-content-center">
+    <div class="container-fluid">
+    <ul class="nav justify-content-center mx-auto">
+          <li class="nav-item">       
+            </li> 
                 <?php wp_nav_menu([
                   'theme_location' => 'header', // localisation de mon menu
                   'container' => false, // permet de retirer mon container
