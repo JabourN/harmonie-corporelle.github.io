@@ -18,6 +18,7 @@ body{
     align-items: center;
     text-align: center;
 }
+
 .dropdown-menu{
     background-color: #757150 ;
 }
@@ -26,8 +27,6 @@ body{
     width: 20px; 
     height: 20px; 
 }
-
-
 /* PAGE D'IMC */
 #container {
     color: black;
@@ -55,10 +54,11 @@ body{
 
         button {
             padding: 5px 10px;
-            background-color: #4CAF50;
+            background-color: #403929;
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
         }
 
         table {
@@ -107,4 +107,6 @@ body{
   background-color: #fff;
 
 }
-
+#Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère,#ObésitéMorbideOuMassiv {
+    width: 400px;
+}

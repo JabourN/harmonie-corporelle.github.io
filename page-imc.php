@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<body>
+<main class="mx-auto">
 <!-- Partie 1 : Carrousel -->
 <div class="container">
   <div class="row row-cols-auto">
@@ -40,8 +40,11 @@
     </div>
 
 <!-- Partie 2 : Calculatrice -->
+<p>L'Indice de Masse Corporelle (IMC) est bien plus qu'un simple chiffre. Il est le reflet de notre équilibre physique, un indicateur essentiel dans notre quête d'harmonie corporelle. Calculé à partir de notre poids et de notre taille, l'IMC offre un aperçu global de notre santé physique.
 
-<body>
+Cependant, l'harmonie corporelle va au-delà des chiffres. Elle s'enracine dans les bonnes habitudes et une nutrition équilibrée. Adopter des choix alimentaires judicieux, pratiquer une activité physique régulière et cultiver une relation positive avec notre corps contribuent à créer cet équilibre tant recherché.
+
+Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devient un compagnon, non pas de jugement, mais de compréhension. Ensemble, cultivons des habitudes saines, embrassons la nutrition éclairée, et célébrons la diversité des chemins menant à une vie équilibrée et épanouissante.</p>
     <div id="container">
         <h3>Calculatrice de l'IMC :</h3>
         <p>Entrez votre poids (en kg)
@@ -99,14 +102,10 @@
             </tbody>
         </table>
 
-        <span id="now"></span>
-        <p id="greeting"></p>
-
-        <textarea id="text" disabled="disabled">Note la date, ton poids, ta taille, ton imc pour visualiser évolution :</textarea>
         <br />
-        <i><input type="button" id="btn" value="Sauvegarde" /></i>
+ <i><input type="button" id="btn" value="Sauvegarde" /></i>
 
-    <script>
+        <script> 
 function AfficheImc() {
     var poids = Number(document.getElementById("poids").value);
     var taille = Number(document.getElementById("taille").value);
@@ -160,37 +159,12 @@ if (corpullence <= 16.5) {
 function highlightRow(rowId, shouldHighlight) {
     var row = document.getElementById(rowId);
     if (shouldHighlight) {
-        row.style.backgroundColor = '#FF66B2'; // Rose fluo
+        row.style.backgroundColor = '#CAAF6F'; // Beige foncé
     } else {
         row.style.backgroundColor = ''; // Réinitialiser la couleur de fond
     }
 }
-
-function now(id) {
-    var date = new Date();
-    var annee = date.getFullYear();
-    var moi = date.getMonth();
-    var jours = ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'];
-    var jour = date.getDay();
-    var h = date.getHours();
-    var m = date.getMinutes();
-
-    if (h < 10) {
-        h = "0" + h;
-    }
-
-    if (m < 10) {
-        m = "0" + m;
-    }
-
-    var resultat = '' + jours[jour] + ':' + date.getDate() + '/' + ('0' + (moi + 1)).slice(-2) + '/' + annee + ' - ' + h + ':' + m;
-    document.getElementById(id).innerHTML = resultat;
-    setTimeout(function () {
-        now(id);
-    }, 1000);
-}
-    </script>
-</body>
-
-
-          
+</script>
+</main>
+     
+<?php get_footer() ?>
