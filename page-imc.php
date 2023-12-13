@@ -43,7 +43,7 @@
 
 <body>
     <div id="container">
-        <h3>⚖️ Calcualtrice de l'IMC :</h3>
+        <h3>Calculatrice de l'IMC :</h3>
         <p>Entrez votre poids (en kg)
             <input id="poids">
         </p>
