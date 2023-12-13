@@ -33,7 +33,7 @@ body{
     color: black;
     max-width: 800px;
     width: 100%;
-    background-color: #6a6e4b;
+    background-color: #8f965f;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ body{
 
         input {
             width: 100px;
-            background-color: #6a6e4b;
+            background-color: #8f965f;
         }
 
         button {
@@ -81,6 +81,7 @@ body{
         }
 
         textarea {
+            color: black;
             width: 100%;
             margin-top: 10px;
         }
@@ -100,7 +101,7 @@ body{
 }
 #corpullence{
   width: 400px;
-  background-color: #6a6e4b;
+  background-color: #8f965f;
 }
 #poids, #taille{
   background-color: #fff;
