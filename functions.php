@@ -34,3 +34,21 @@ function montheme_menu_link_class($attrs) {
 
 add_filter('nav_menu_css_class', 'montheme_menu_class');
 add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
+
+// EXPERTS
+
+
+function create_posttypes() {
+    register_post_type('experts', [
+        'labels' => [
+            'name' => ( 'experts' ),
+            'singular_name' => ( 'expert' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'experts'],
+        'show_in_rest' => false,
+    ]);
+}
+add_action('init', 'create_posttypes');

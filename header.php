@@ -36,10 +36,6 @@
   </div>
 </div>
 
-
-
-
-
 <!-- Le logo -->
 <div class="text-center">
     <a href="<?php echo home_url(); ?>">
