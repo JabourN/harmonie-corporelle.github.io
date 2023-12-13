@@ -70,7 +70,7 @@ Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devien
                     <th>&emsp;Description</th>
                 </tr> 
             </thead>
-            <tbody>
+            <tbody> 
                 <tr>
                     <td><input type="text" id="Dénutrition" disabled="disabled"/></td>
                     <td>&emsp;Dénutrition</td>
