@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <main class="mx-auto text-center">
+
+
     <?php
 /* Phrase du sondage */
     $questions = array(
@@ -18,7 +20,7 @@
 
     foreach ($questions as $index => $question) {
         echo '<div class="question' . ($index > 0 ? ' inactive' : '') . '" id="question' . $index . '">';
-        echo '<p>' . $question . '</p>';
+        echo '<h5>' . $question . '</h5>';
 
         for ($i = 1; $i <= 7; $i++) {
             if ($i == 1) {
