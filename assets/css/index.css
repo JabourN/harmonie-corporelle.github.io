@@ -1,11 +1,14 @@
 header{
     background-color: #E9DFC6;
+    color: #403929;
+
 }
 footer{
     background-color: #757150 ;
     color: white;
 }
 body{
+    color: #403929;
     background-color: #E9DFC6;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -26,7 +29,7 @@ body{
 
 /* PAGE D'IMC */
 #container {
-    color: black;
+    color: #403929;
     max-width: 800px;
     width: 100%;
     background-color: #8f965f;
@@ -37,11 +40,13 @@ body{
 }
 
         h3 {
-            color: #333;
+            color: #403929;
         }
 
         p {
             margin-bottom: 10px;
+            color: #403929;
+
         }
 
         input {
@@ -77,7 +82,7 @@ body{
         }
 
         textarea {
-            color: black;
+            color: #403929;
             width: 100%;
             margin-top: 10px;
         }
