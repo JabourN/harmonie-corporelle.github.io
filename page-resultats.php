@@ -3,7 +3,7 @@
 <div class="container mt-4">
 <div class="row justify-content-center">
 <div class="col mb-4">
-<div class="card mb-4 position-relative" style="width: 500px; height: 700px;">
+<div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
     <img src="<?php echo get_template_directory_uri(); ?>/assets\images\lechasseur.png" alt="test" class="card-img-top">
     <div class="card-body d-flex flex-column align-items-center">
     <h5 class="card-title position-absolute top-0 start-50 translate-middle">Le Chasseur de Nutriments</h5>
@@ -15,7 +15,7 @@
     </div>
 
   <div class="col mb-4">
-  <div class="card mb-4" style="width: 500px; height: 700px;">
+  <div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
       <img src="<?php echo get_template_directory_uri(); ?>/assets\images\lamateur.png" alt="test" class="card-img-top">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">L'Amateur de Bien-Être</h5>
@@ -27,7 +27,7 @@
   </div>
 
     <div class="col mb-4">
-    <div class="card mb-4" style="width: 500px; height: 700px;">
+    <div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
     <img src="<?php echo get_template_directory_uri(); ?>/assets\images\gourmand.png" alt="test" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">Le Gourmand Sain</h5>
@@ -39,7 +39,7 @@
   </div>
 
   <div class="col mb-11">
-  <div class="card mb-4" style="width: 500px; height: 700px;">
+  <div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nettoyeur.png" alt="test" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">Le Nettoyeur du Corps</h5>
@@ -51,7 +51,7 @@
   </div>
 
   <div class="col mb-3">
-  <div class="card mb-4" style="width: 500px; height: 700px;">
+  <div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
     <img src="<?php echo get_template_directory_uri(); ?>/assets\images\latlete.png" alt="test" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">L'athlète Gourmet</h5>
@@ -62,7 +62,7 @@
     </div>
   </div>
   <div class="col mb-3">
-  <div class="card mb-4" style="width: 500px; height: 700px;">
+  <div class="card mb-4 mx-auto" style="width: 500px; height: 700px;">
     <img src="<?php echo get_template_directory_uri(); ?>/assets\images\lequilibre.png" alt="test" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title"></h5>
@@ -72,6 +72,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
          
 <?php get_footer() ?>
