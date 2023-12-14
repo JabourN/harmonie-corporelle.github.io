@@ -49,33 +49,14 @@
 
 <nav class="navbar navbar-expand-lg justify-content-center">
     <div class="container-fluid">
-    <ul class="nav justify-content-center mx-auto">
-          <li class="nav-item">       
-            </li> 
+        <ul class="nav justify-content-center mx-auto my-2 mx-5">
                 <?php wp_nav_menu([
                   'theme_location' => 'header', // localisation de mon menu
                   'container' => false, // permet de retirer mon container
-                  'menu_class' => 'navbar-nav me-auto' // la classe que je veux dans mon <ul></ul>
+                  'menu_class' => 'navbar-nav' // la classe que je veux dans mon <ul></ul>
                 ]); ?>
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">SONDAGE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo home_url('/ressources'); ?>">RESSOURCES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">IMC</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FORUM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">EXPERTS</a>
-                    </li>
-                </ul> -->
-            </div>
-        </div>
-    </nav>
+           </ul>
+    </div>
+</nav>
 
 </header>

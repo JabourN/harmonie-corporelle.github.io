@@ -23,6 +23,10 @@ body{
     background-color: #757150 ;
 }
 
+.navbar-nav {
+    margin-left: 10rem; 
+    margin-right: 10rem;
+}
 
 /* PAGE D'IMC */
 #container {
