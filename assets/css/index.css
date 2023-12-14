@@ -1,3 +1,8 @@
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 header{
     background-color: #E9DFC6;
     color: #403929;
@@ -12,8 +17,8 @@ body{
     background-color: #E9DFC6;
     margin: 0;
     font-family: Arial, sans-serif;
+    
 }
-
 .navbar{
     background-color: #E9DFC6;
     display: flex;
