@@ -27,7 +27,7 @@ body{
     text-align: center;
 }
 .navbar-nav li {
-    margin-right: 180px; /* ajustez la valeur selon vos besoins */
+    margin-right: 170px;
 }
 
 .dropdown-menu{
@@ -212,7 +212,7 @@ label.inactive {
 
 .custom-card-title {
     font-family: 'Montserrat', sans-serif;
-    background: #757150;
+    background: #393727;
     position: absolute;
     top: 35%;
     left: 50%;
