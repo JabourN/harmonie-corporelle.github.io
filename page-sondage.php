@@ -1,6 +1,53 @@
 <?php get_header(); ?>
 
-<main class="mx-auto text-center">
+<main class="mx-auto">
+
+<div class="card" style="mx-auto">
+  <div class="card-body">
+    <h3 class="card-title">Information personnelle</h3>
+
+    <div class="d-flex justify-content-center">
+  <div class="p-2"> <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <p>Nom:
+    <input type="name" for="name" name="nom" id="Infoperso" required> </p>
+</div>
+  <div class="p-2">    <p>Prénom:
+    <input type="prenom" for="prenom" name="prenom" id="Infoperso" required></p>
+</div>
+  <div class="p-2"> <p>Âge:
+    <select name="age"></p>
+        <?php
+        // Âge
+        for ($i = 1; $i <= 150; $i++) {
+            echo "<option value=\"$i\">$i</option>";
+        }
+        ?>
+    </select></div>
+</div>
+<div class="d-flex justify-content-center">
+  <div class="p-2">   <p>E-mail:
+    <input type="email" for="email" name="email" id="Infoperso" required></p></div>
+  <div class="p-2">
+    <details >
+        <summary>Informations additionnelles</summary>
+        <p>Sexe:
+        <select name="sexe">
+            <option value="M">Masculin</option>
+            <option value="F">Féminin</option>
+            <option value="NB">Non binaire</option>
+        </select></p>
+    </details></div>
+</div>
+
+</form>
+
+</div>
+ </div>
+</div>
+
+
+<div class="mx-auto text-center">
+
 
 
     <?php
@@ -40,84 +87,6 @@
 
     <button type="button" id="nextBtn" class="btn btn-secondary" onclick="showNextQuestion()">Suivante</button>
 
-    <style>
-        
-        input[type="radio"] {
-            display: none;
-        }
-
-        label {
-            display: inline-block;
-            border: 3px solid;
-            border-radius: 50%;
-            margin: 15px;
-        }
-
-        label:nth-of-type(1),
-        label:nth-of-type(2),
-        label:nth-of-type(3) {
-            border-color: #DE9339;
-        }
-
-        label:nth-of-type(4) {
-            border-color: #fff;
-        }
-
-        label:nth-of-type(5),
-        label:nth-of-type(6),
-        label:nth-of-type(7) {
-            border-color: #8F965F;
-        }
-
-        label:nth-of-type(1),
-        label:nth-of-type(7) {
-            width: 60px;
-            height: 60px;
-        }
-
-        label:nth-of-type(2),
-        label:nth-of-type(6) {
-            width: 50px;
-            height: 50px;
-        }
-
-        label:nth-of-type(3),
-        label:nth-of-type(5) {
-            width: 40px;
-            height: 40px;
-        }
-
-        label:nth-of-type(4) {
-            width: 30px;
-            height: 30px;
-        }
-
-        label.active[value="1","2","3"] {
-            background-color: #DE9339 !important;
-            pointer-events: auto !important;
-        }
-        label.active[value="4"] {
-            background-color: #fff !important;
-            pointer-events: auto !important;
-        }
-        label.active[value="5","6","7"] {
-            background-color: #8F965F !important;
-            pointer-events: auto !important;
-        }
-        
-
-        label.inactive {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .label-text {
-            display: inline-block;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-    </style>
-
     <script>
         function changerCouleur(label, index, i) {
             var currentLabels = document.querySelectorAll('label[for^="secteur' + index + '"]');
@@ -150,7 +119,7 @@
             }
         }
     </script>
-
+</div>
 </main>
 
 <?php get_footer() ?>
