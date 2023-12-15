@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php require('actions/inscriptionaction.php'); ?> <!-- Correction du chemin du fichier -->
+<?php require('actions/inscriptionaction.php'); ?> 
 <br><br>
 <form class="container" method="POST">
 
