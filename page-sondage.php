@@ -97,7 +97,7 @@
     }
     ?>
 
-    <button type="button" id="nextBtn" class="btn btn-secondary" onclick="showNextQuestion()">Suivante</button>
+<button type="button" id="nextBtn" class="btn btn-secondary" onclick="redirectToResults()">Suivante</button>
 
     <script>
         function changerCouleur(label, index, i) {
@@ -130,6 +130,19 @@
                 });
             }
         }
+
+        function redirectToResults() {
+    // Liste des URLs des pages résultats
+    var resultsPages = [
+        'http://localhost:8888/harmonie-corporelle/resultats/', // Remplacez 'url1' par l'URL réelle de votre première page résultats
+    ];
+
+    // Choisissez une URL au hasard
+    var randomUrl = resultsPages[Math.floor(Math.random() * resultsPages.length)];
+
+    // Redirigez l'utilisateur vers la page sélectionnée
+    window.location.href = randomUrl;
+}
     </script>
 </div>
 </main>
