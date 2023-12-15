@@ -16,8 +16,8 @@ body{
     color: #403929;
     background-color: #E9DFC6;
     margin: 0;
-    font-family: Arial, sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;
+
 }
 .navbar{
     background-color: #E9DFC6;
@@ -124,6 +124,7 @@ body{
 }
 
 /*PAGE SONDAGE */
+
 input[type="radio"] {
     display: none;
 }
