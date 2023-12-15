@@ -1,7 +1,5 @@
-<?php
-
-require('database.php'); 
-
+<?php require('database.php'); ?>
+<?php 
 // Validation du formulaire
 if(isset($_POST['validate'])){
 
@@ -28,17 +26,18 @@ if(isset($_POST['validate'])){
             $getInfosOfThisUserReq = $bdd->prepare('SELECT id, pseudo, lastname, firstname FROM users WHERE lastname = ? AND firstname = ? AND pseudo = ?');
             $getInfosOfThisUserReq->execute(array($user_lastname, $user_firstname, $user_pseudo ));
 
-            $userInfos = $getInfosOfThisUserReq->fetch();
+            $usersInfos = $getInfosOfThisUserReq->fetch();
 
             // Authentification de l'utilisateur sur le site et récupération de données
             $_SESSION['auth'] = true;
-            $_SESSION['id'] = $userInfos['id'];
-            $_SESSION['lastname'] = $userInfos['lastname'];
-            $_SESSION['firstname'] = $userInfos['firstname'];
-            $_SESSION['pseudo'] = $userInfos['pseudo'];
+            $_SESSION['id'] = $usersInfos['id'];
+            $_SESSION['lastname'] = $usersInfos['lastname'];
+            $_SESSION['firstname'] = $usersInfos['firstname'];
+            $_SESSION['pseudo'] = $usersInfos['pseudo'];
 
             // Rediriger l'utilisateur vers la page 
-            header('Location: index.php');
+            header('Location:/harmonie-corporelle/i/index.php');
+            exit();
 
         } else {
             $errorMsg = "L'utilisateur existe déjà sur le site";

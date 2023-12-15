@@ -1,5 +1,11 @@
-<?php get_header(); ?>
 <?php require('actions/inscriptionaction.php'); ?> 
+<?php get_header(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<?php include 'includes/head.php'; ?>
+<body>
+
+
 <br><br>
 <form class="container" method="POST">
 
@@ -24,3 +30,5 @@
 
     <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
 </form>
+</body>
+</html>
