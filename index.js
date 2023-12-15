@@ -82,5 +82,4 @@ function now(id) {
     }, 1000);
 }
 
-/*SONDAGE*/
 
