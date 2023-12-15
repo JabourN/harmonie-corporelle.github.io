@@ -3,46 +3,58 @@
 <main class="mx-auto">
 
 <div class="card" style="mx-auto">
-  <div class="card-body">
-    <h3 class="card-title">Information personnelle</h3>
+    <div class="card-body">
+        <h3 class="card-title">Information personnelle</h3>
 
-    <div class="d-flex justify-content-center">
-  <div class="p-2"> <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <p>Nom:
-    <input type="name" for="name" name="nom" id="Infoperso" required> </p>
-</div>
-  <div class="p-2">    <p>Prénom:
-    <input type="prenom" for="prenom" name="prenom" id="Infoperso" required></p>
-</div>
-  <div class="p-2"> <p>Âge:
-    <select name="age"></p>
-        <?php
-        // Âge
-        for ($i = 1; $i <= 150; $i++) {
-            echo "<option value=\"$i\">$i</option>";
-        }
-        ?>
-    </select></div>
-</div>
-<div class="d-flex justify-content-center">
-  <div class="p-2">   <p>E-mail:
-    <input type="email" for="email" name="email" id="Infoperso" required></p></div>
-  <div class="p-2">
-    <details >
-        <summary>Informations additionnelles</summary>
-        <p>Sexe:
-        <select name="sexe">
-            <option value="M">Masculin</option>
-            <option value="F">Féminin</option>
-            <option value="NB">Non binaire</option>
-        </select></p>
-    </details></div>
-</div>
+        <div class="d-flex justify-content-center">
+            <div class="p-2">
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <p>Nom:
+                        <input type="text" name="nom" id="Infoperso" required>
+                    </p>
+            </div>
+            <div class="p-2">
+                <p>Prénom:
+                    <input type="text" name="prenom" id="Infoperso" required>
+                </p>
+            </div>
+            <div class="p-2">
+                <p>Âge:
+                    <select name="age">
+                        <?php
+                        // Âge
+                        for ($i = 1; $i <= 150; $i++) {
+                            echo "<option value=\"$i\">$i</option>";
+                        }
+                        ?>
+                    </select>
+                </p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="p-2">
+                <p>E-mail:
+                    <input type="email" name="email" id="Infoperso" required>
+                </p>
+            </div>
+            <div class="p-2">
+                <details>
+                    <summary>Informations additionnelles</summary>
+                    <p>Sexe:
+                        <select name="sexe">
+                            <option value="M">Masculin</option>
+                            <option value="F">Féminin</option>
+                            <option value="NB">Non binaire</option>
+                        </select>
+                    </p>
+                </details>
+            </div>
+        </div>
 
-</form>
+        </form>
 
+    </div>
 </div>
- </div>
 </div>
 
 
@@ -85,7 +97,7 @@
     }
     ?>
 
-    <button type="button" id="nextBtn" class="btn btn-secondary" onclick="showNextQuestion()">Suivante</button>
+<button type="button" id="nextBtn" class="btn btn-secondary" onclick="redirectToResults()">Suivante</button>
 
     <script>
         function changerCouleur(label, index, i) {
@@ -118,6 +130,19 @@
                 });
             }
         }
+
+        function redirectToResults() {
+    // Liste des URLs des pages résultats
+    var resultsPages = [
+        'http://localhost:8888/harmonie-corporelle/resultats/', // Remplacez 'url1' par l'URL réelle de votre première page résultats
+    ];
+
+    // Choisissez une URL au hasard
+    var randomUrl = resultsPages[Math.floor(Math.random() * resultsPages.length)];
+
+    // Redirigez l'utilisateur vers la page sélectionnée
+    window.location.href = randomUrl;
+}
     </script>
 </div>
 </main>
