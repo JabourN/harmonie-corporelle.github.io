@@ -1,25 +1,73 @@
 <?php get_header(); ?>
 
-<main class="mx-auto text-center">
+<main class="mx-auto">
+
+<div class="card" style="mx-auto">
+  <div class="card-body">
+    <h3 class="card-title">Information personnelle</h3>
+
+    <div class="d-flex justify-content-center">
+  <div class="p-2"> <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <p>Nom:
+    <input type="name" for="name" name="nom" id="Infoperso" required> </p>
+</div>
+  <div class="p-2">    <p>Prénom:
+    <input type="prenom" for="prenom" name="prenom" id="Infoperso" required></p>
+</div>
+  <div class="p-2"> <p>Âge:
+    <select name="age"></p>
+        <?php
+        // Âge
+        for ($i = 1; $i <= 150; $i++) {
+            echo "<option value=\"$i\">$i</option>";
+        }
+        ?>
+    </select></div>
+</div>
+<div class="d-flex justify-content-center">
+  <div class="p-2">   <p>E-mail:
+    <input type="email" for="email" name="email" id="Infoperso" required></p></div>
+  <div class="p-2">
+    <details >
+        <summary>Informations additionnelles</summary>
+        <p>Sexe:
+        <select name="sexe">
+            <option value="M">Masculin</option>
+            <option value="F">Féminin</option>
+            <option value="NB">Non binaire</option>
+        </select></p>
+    </details></div>
+</div>
+
+</form>
+
+</div>
+ </div>
+</div>
+
+
+<div class="mx-auto text-center">
+
+
 
     <?php
+/* Phrase du sondage */
     $questions = array(
-        "Quelle est votre préférence alimentaire?",
-        "Combien de fruits consommez-vous chaque jour?",
-        "Avez-vous des allergies alimentaires?",
-        "Quel est votre plat préféré?",
-        "Pratiquez-vous une activité physique régulière?",
-        "Quelle est votre boisson préférée?",
-        "À quelle fréquence mangez-vous des repas équilibrés?",
-        "Quel est votre niveau de stress quotidien?",
-        "Dormez-vous suffisamment chaque nuit?",
-        "Quel est votre type d'exercice physique favori?",
-        "Avez-vous des restrictions alimentaires?"
+        "Je m’engage régulièrement dans des activités sportives ou physiques pour maintenir un mode de vie actif.",
+        "Je choisis des aliments en fonction de leur valeur nutritive plutôt que de leur goût seul.",
+        "Je fais attention à la provenance de mes aliments, privilégiant par exemple des produits locaux.",
+        "Je suis attentif aux signaux de mon corps pour savoir quand l’ai faim ou suis rassasié.",
+        "Je cherche des aliments qui peuvent contribuer à mon bien-être émotionnel et mental.",
+        "Je surveille activement mon apport calorique quotidien pour maintenir un poids santé.",
+        "Je m’efforce de rester hydraté en buvant suffisamment d’eau tout au long de la journée",
+        "Je choisis des aliments en fonction de leur valeur nutritive plutôt que de leur gout seul.",
+        "L’idée de détoxifier mon corps à travers mon alimentation est importante pour mol.",
+        "Je m’assure de consommer suffisamment de protéines pour soutenir la récupération après mes séances d’entraînement.",
     );
 
     foreach ($questions as $index => $question) {
         echo '<div class="question' . ($index > 0 ? ' inactive' : '') . '" id="question' . $index . '">';
-        echo '<p>' . $question . '</p>';
+        echo '<h5>' . $question . '</h5>';
 
         for ($i = 1; $i <= 7; $i++) {
             if ($i == 1) {
@@ -38,74 +86,6 @@
     ?>
 
     <button type="button" id="nextBtn" class="btn btn-secondary" onclick="showNextQuestion()">Suivante</button>
-
-    <style>
-        input[type="radio"] {
-            display: none;
-        }
-
-        label {
-            display: inline-block;
-            border: 3px solid #8F965F;
-            border-radius: 50%;
-            margin: 15px;
-        }
-
-        label:nth-of-type(1),
-        label:nth-of-type(2),
-        label:nth-of-type(3) {
-            border-color: #DE9339;
-        }
-
-        label:nth-of-type(4) {
-            border-color: #fff;
-        }
-
-        label:nth-of-type(5),
-        label:nth-of-type(6),
-        label:nth-of-type(7) {
-            border-color: #8F965F;
-        }
-
-        label:nth-of-type(1),
-        label:nth-of-type(7) {
-            width: 100px;
-            height: 100px;
-        }
-
-        label:nth-of-type(2),
-        label:nth-of-type(6) {
-            width: 75px;
-            height: 75px;
-        }
-
-        label:nth-of-type(3),
-        label:nth-of-type(5) {
-            width: 50px;
-            height: 50px;
-        }
-
-        label:nth-of-type(4) {
-            width: 25px;
-            height: 25px;
-        }
-
-        label.active {
-            background-color: #403929 !important;
-            pointer-events: auto !important;
-        }
-
-        label.inactive {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .label-text {
-            display: inline-block;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-    </style>
 
     <script>
         function changerCouleur(label, index, i) {
@@ -139,7 +119,7 @@
             }
         }
     </script>
-
+</div>
 </main>
 
 <?php get_footer() ?>

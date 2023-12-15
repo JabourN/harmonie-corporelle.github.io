@@ -1,4 +1,4 @@
-
+/*IMC*/
 function AfficheImc() {
     var poids = Number(document.getElementById("poids").value);
     var taille = Number(document.getElementById("taille").value);
@@ -81,3 +81,6 @@ function now(id) {
         now(id);
     }, 1000);
 }
+
+/*SONDAGE*/
+

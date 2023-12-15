@@ -1,3 +1,8 @@
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 header{
     background-color: #E9DFC6;
     color: #403929;
@@ -12,8 +17,8 @@ body{
     background-color: #E9DFC6;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-}
 
+}
 .navbar{
     background-color: #E9DFC6;
     display: flex;
@@ -45,6 +50,7 @@ body{
 
         h3 {
             color: #403929;
+            text-align: center;
         }
 
         p {
@@ -119,17 +125,81 @@ body{
 
 /*PAGE SONDAGE */
 
+input[type="radio"] {
+    display: none;
+}
 
-/*PAGE RESULTATS */
+label {
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 15px;
+}
 
-.custom-card-title {
-    font-family: 'Montserrat', sans-serif;
-    background: #757150;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 6px;
-    border-radius: 10px;
-    color: #000000; 
+label:nth-of-type(1),
+label:nth-of-type(2),
+label:nth-of-type(3) {
+    border-color: #DE9339;
+}
+
+label:nth-of-type(4) {
+    border-color: #fff;
+}
+
+label:nth-of-type(5),
+label:nth-of-type(6),
+label:nth-of-type(7) {
+    border-color: #8F965F;
+}
+
+label:nth-of-type(1),
+label:nth-of-type(7) {
+    width: 60px;
+    height: 60px;
+}
+
+label:nth-of-type(2),
+label:nth-of-type(6) {
+    width: 50px;
+    height: 50px;
+}
+
+label:nth-of-type(3),
+label:nth-of-type(5) {
+    width: 40px;
+    height: 40px;
+}
+
+label:nth-of-type(4) {
+    width: 30px;
+    height: 30px;
+}
+
+label.active[value= 1], label.active[value= 2], label.active[value= 3] {
+    background-color: #DE9339 !important;
+    pointer-events: auto !important;
+}
+label.active[value="4"] {
+    background-color: #fff !important;
+    pointer-events: auto !important;
+}
+label.active[value= 5], label.active[value= 6], label.active[value= 7]  {
+    background-color: #8F965F !important;
+    pointer-events: auto !important;
+}
+
+
+label.inactive {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.label-text {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10%;
+}
+#Infoperso {
+    background-color: #BEB6A5;
+    width: 250px;
 }
