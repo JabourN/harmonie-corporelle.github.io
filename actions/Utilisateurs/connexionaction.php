@@ -1,4 +1,5 @@
-<?php require('database.php');
+<?php require('database.php'); ?>
+<?php
 // Validation du formulaire
 if(isset($_POST['validate'])){
 
@@ -39,4 +40,5 @@ if(isset($_POST['validate'])){
         $errorMsg = "Veuillez compléter tous les champs...";
     }
 }
+
 ?>

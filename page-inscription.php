@@ -1,11 +1,10 @@
-<?php require('actions/inscriptionaction.php'); ?> 
+<?php require('actions/Utilisateurs/inscriptionaction.php'); ?> 
 <?php get_header(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
 <body>
-
-
+    
 <br><br>
 <form class="container" method="POST">
 

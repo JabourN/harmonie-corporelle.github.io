@@ -134,7 +134,7 @@
         function redirectToResults() {
     // Liste des URLs des pages résultats
     var resultsPages = [
-        'http://localhost:8888/harmonie-corporelle/resultats/', // Remplacez 'url1' par l'URL réelle de votre première page résultats
+        'http://localhost:8888/harmonie-corporelle/resultats/, // Remplacez 'url1' par l'URL réelle de votre première page résultats
     ];
 
     // Choisissez une URL au hasard
