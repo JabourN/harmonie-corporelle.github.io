@@ -36,7 +36,7 @@ if(isset($_POST['validate'])){
             $_SESSION['pseudo'] = $usersInfos['pseudo'];
 
             // Rediriger l'utilisateur vers la page 
-            header('Location:/harmonie-corporelle/i/index.php');
+            header('Location:/harmonie-corporelle/index.php');
             exit();
 
         } else {
