@@ -211,8 +211,7 @@ label.inactive {
 /*PAGE RESULTATS */
 
 .custom-card-title {
-    font-family: 'Montserrat', sans-serif;
-    background: #393727;
+    background: #757150;
     position: absolute;
     top: 35%;
     left: 50%;
@@ -221,3 +220,6 @@ label.inactive {
     border-radius: 10px;
     color: #000000; 
 }
+
+
+
