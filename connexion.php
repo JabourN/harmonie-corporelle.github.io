@@ -3,7 +3,6 @@ require('actions/Utilisateurs/connexionaction.php');
 include 'includes/head.php';
 require('actions/Utilisateurs/securiteaction.php'); ?>
 
-<?php get_header(); ?>
 <main>
 
     <br><br>
@@ -23,4 +22,3 @@ require('actions/Utilisateurs/securiteaction.php'); ?>
     </form>
 </main>
 
-    <?php get_footer(); ?>
