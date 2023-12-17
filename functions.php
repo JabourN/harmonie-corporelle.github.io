@@ -68,3 +68,31 @@ function create_resultats_posttypes() {
     ]);
 }
 add_action('init', 'create_resultats_posttypes');
+
+// RESSOURCES
+function attribuer_categorie_dates_automatiquement() {
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+    );
+
+    $articles = new WP_Query($args);
+
+    while ($articles->have_posts()) : $articles->the_post();
+
+        $date_actuelle = date('Ymd');
+        $date_article = get_the_date('Ymd');
+
+        $cat_id_dates = get_cat_ID('Dates');
+
+        if ($date_article === $date_actuelle || $date_article === date('Ymd', strtotime('-1 day'))) {
+            // Associer l'article à la catégorie "Dates"
+            wp_set_post_categories(get_the_ID(), array($cat_id_dates), true);
+        }
+
+    endwhile;
+
+    wp_reset_postdata();
+}
+
+add_action('init', 'attribuer_categorie_dates_automatiquement');
