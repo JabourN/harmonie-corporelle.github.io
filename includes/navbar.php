@@ -10,7 +10,13 @@
           <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/">Questions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/forum/">Publier une question</a>
+          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/publier/">Publier une question</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/forum/">Mes questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/connexion/">Déconnexion</a>
         </li>
        </ul>
     </div>

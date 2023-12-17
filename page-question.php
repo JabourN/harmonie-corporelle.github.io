@@ -7,7 +7,7 @@ include 'includes/head.php';
 
 <?php get_header(); ?>
 <main>
-<?php include 'includes/navbar.php'; ?>
+
 <form class="container" method="POST">
 
     <?php 
@@ -36,3 +36,8 @@ include 'includes/head.php';
 </form>
 </main>
 <?php get_footer(); ?>
+<?php
+require('actions/Questions/maquestionaction.php');
+require('actions/Utilisateurs/securiteaction.php');
+include 'includes/head.php';
+?>

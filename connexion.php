@@ -21,4 +21,6 @@ require('actions/Utilisateurs/securiteaction.php'); ?>
    
         <a href="http://localhost:8888/harmonie-corporelle/inscription/"><p>Je n'ai pas de compte, je m'inscris</p></a>
     </form>
+</main>
 
+    <?php get_footer(); ?>

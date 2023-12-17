@@ -29,7 +29,7 @@
 
     <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
    <br>
-    <a href="http://localhost:8888/harmonie-corporelle/forum/"><p>J'ai déja un compte, je me connecte</p></a>
+    <a href="http://localhost:8888/harmonie-corporelle/connexion/"><p>J'ai déja un compte, je me connecte</p></a>
 </form>
 </body>
 </html>
