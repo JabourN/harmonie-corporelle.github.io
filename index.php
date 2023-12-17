@@ -1,6 +1,4 @@
-<?php require('actions/Utilisateurs/securiteaction.php');
-include 'includes/head.php';
-?>
+
 <?php get_header(); ?> 
 <!-- MAIN -->
 <main class="mx-auto">
