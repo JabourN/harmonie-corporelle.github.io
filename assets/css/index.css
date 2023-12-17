@@ -221,5 +221,35 @@ label.inactive {
     color: #000000; 
 }
 
+/*PAGE RESSOURCES */
 
 
+.text-center {
+    text-align: center;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation a:visited {
+    color: black;
+}
+
+#navigation a:hover,
+#navigation a:active {
+    color: black;
+}
+
+.article-content {
+    margin: 0 auto; /* Centrer le contenu horizontalement */
+}
+
+.podcast-content,
+.livre-content,
+.video-content,
+.default-content {
+    display: flex;
+    justify-content: center;
+}
