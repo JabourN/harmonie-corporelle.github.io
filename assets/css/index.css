@@ -26,6 +26,9 @@ body{
     align-items: center;
     text-align: center;
 }
+.navbar-nav li {
+    margin-right: 170px;
+}
 
 .dropdown-menu{
     background-color: #757150 ;
@@ -202,4 +205,19 @@ label.inactive {
 #Infoperso {
     background-color: #BEB6A5;
     width: 250px;
+}
+
+
+/*PAGE RESULTATS */
+
+.custom-card-title {
+    font-family: 'Montserrat', sans-serif;
+    background: #393727;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px;
+    border-radius: 10px;
+    color: #000000; 
 }
