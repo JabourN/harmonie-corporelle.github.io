@@ -99,52 +99,57 @@
 
 <button type="button" id="nextBtn" class="btn btn-secondary" onclick="redirectToResults()">Suivante</button>
 
-    <script>
-        function changerCouleur(label, index, i) {
-            var currentLabels = document.querySelectorAll('label[for^="secteur' + index + '"]');
-            currentLabels.forEach(function (currentLabel) {
-                currentLabel.classList.remove('active');
+<script>
+    var currentQuestion = 0;
+
+    function changerCouleur(label, index, i) {
+        var currentLabels = document.querySelectorAll('label[for^="secteur' + index + '"]');
+        currentLabels.forEach(function (currentLabel) {
+            currentLabel.classList.remove('active');
+        });
+
+        label.classList.add('active');
+
+        currentLabels.forEach(function (currentLabel) {
+            currentLabel.classList.add('inactive');
+        });
+
+        var borderColor = window.getComputedStyle(label, null).getPropertyValue('border-color');
+        label.style.backgroundColor = borderColor;
+
+        document.getElementById('nextBtn').disabled = false;
+
+        if (index < <?php echo count($questions) - 1; ?>) {
+            var nextIndex = index + 1;
+            var nextLabels = document.querySelectorAll('label[for^="secteur' + nextIndex + '"]');
+            nextLabels.forEach(function (nextLabel) {
+                nextLabel.classList.remove('inactive');
             });
 
-            label.classList.add('active');
-
-            currentLabels.forEach(function (currentLabel) {
-                currentLabel.classList.add('inactive');
+            // Réactivez les boutons radio de la question suivante
+            var nextRadios = document.querySelectorAll('input[name="secteur' + nextIndex + '"]');
+            nextRadios.forEach(function (nextRadio) {
+                nextRadio.disabled = false;
             });
-
-            var borderColor = window.getComputedStyle(label, null).getPropertyValue('border-color');
-            label.style.backgroundColor = borderColor;
-
-            document.getElementById('nextBtn').disabled = false;
-
-            if (index < <?php echo count($questions) - 1; ?>) {
-                var nextIndex = index + 1;
-                var nextLabels = document.querySelectorAll('label[for^="secteur' + nextIndex + '"]');
-                nextLabels.forEach(function (nextLabel) {
-                    nextLabel.classList.remove('inactive');
-                });
-
-                var nextRadios = document.querySelectorAll('input[name="secteur' + nextIndex + '"]');
-                nextRadios.forEach(function (nextRadio) {
-                    nextRadio.disabled = false;
-                });
-            }
         }
+    }
 
-        function redirectToResults() {
-    // Liste des URLs des pages résultats
-    var resultsPages = [
-        'http://localhost:8888/harmonie-corporelle/resultats/, // Remplacez 'url1' par l'URL réelle de votre première page résultats
-    ];
+    function redirectToResults() {
+        // Liste des URLs des pages résultats
+        var resultsPages = [
+            'http://localhost:8888/harmonie-corporelle/resultats/', // Remplacez 'url1' par l'URL réelle de votre première page résultats
+        ];
 
-    // Choisissez une URL au hasard
-    var randomUrl = resultsPages[Math.floor(Math.random() * resultsPages.length)];
+        // Choisissez une URL au hasard
+        var randomUrl = resultsPages[Math.floor(Math.random() * resultsPages.length)];
 
-    // Redirigez l'utilisateur vers la page sélectionnée
-    window.location.href = randomUrl;
-}
-    </script>
+        // Redirigez l'utilisateur vers la page sélectionnée
+        window.location.href = randomUrl;
+    }
+</script>
+
 </div>
+
 </main>
 
 <?php get_footer() ?>
