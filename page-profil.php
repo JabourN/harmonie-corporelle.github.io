@@ -2,6 +2,7 @@
     session_start(); 
     require('actions/Utilisateurs/showOneUsersProfileAction.php');   
 ?>
+<?php get_header(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
@@ -45,6 +46,8 @@
             }
         ?>  
     </div>
+          <input class="nav-link" href="http://localhost:8888/harmonie-corporelle/connexion/">Déconnexion</input>
 
 </body>
 </html>
+<?php get_footer(); ?>
