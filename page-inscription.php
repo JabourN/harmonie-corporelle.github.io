@@ -4,9 +4,16 @@
 <html lang="en">
 <?php include 'includes/head.php'; ?>
 <body>
-    
+<br><br>
+<script>
+    h1{
+    text-align: center;
+}
+</script>
+   <h1> Inscription </h1> 
 <br><br>
 <form class="container" method="POST">
+
 
     <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
 
