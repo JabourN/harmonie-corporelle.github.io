@@ -3,7 +3,6 @@ require('actions/Utilisateurs/connexionaction.php');
 include 'includes/head.php';
 require('actions/Utilisateurs/securiteaction.php'); ?>
 
-<?php get_header(); ?>
 <main>
 
     <br><br>
@@ -21,4 +20,5 @@ require('actions/Utilisateurs/securiteaction.php'); ?>
    
         <a href="http://localhost:8888/harmonie-corporelle/inscription/"><p>Je n'ai pas de compte, je m'inscris</p></a>
     </form>
+</main>
 
