@@ -9,14 +9,22 @@
         <div class="d-flex justify-content-center">
             <div class="p-2">
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <p>Nom:
-                        <input type="text" name="nom" id="Infoperso" required>
-                    </p>
-            </div>
-            <div class="p-2">
-                <p>Prénom:
-                    <input type="text" name="prenom" id="Infoperso" required>
-                </p>
+                <div class="mb-3">
+        <p>Pseudo</p> 
+        <input type="text" class="form-control" name="pseudo">
+    </div> 
+    <div class="mb-3">
+        <p>Nom</p> 
+        <input type="text" class="form-control" name="lastname">
+    </div> 
+    <div class="mb-3">
+        <p>Prénom</p> 
+        <input type="text" class="form-control" name="firstname">
+    </div> 
+    <div class="mb-3">
+        <p>Password</p> 
+        <input type="password" class="form-control" name="password">
+    </div>
             </div>
             <div class="p-2">
                 <p>Âge:
@@ -33,14 +41,14 @@
         </div>
         <div class="d-flex justify-content-center">
             <div class="p-2">
-                <p>E-mail:
-                    <input type="email" name="email" id="Infoperso" required>
+                <p>E-mail
+                <input type="email" class="form-control" name="email">
                 </p>
             </div>
             <div class="p-2">
                 <details>
                     <summary>Informations additionnelles</summary>
-                    <p>Sexe:
+                    <p>Sexe
                         <select name="sexe">
                             <option value="M">Masculin</option>
                             <option value="F">Féminin</option>
@@ -51,6 +59,9 @@
             </div>
         </div>
 
+        <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
+   <br>
+    <a href="http://localhost:8888/harmonie-corporelle/connexion/"><p>J'ai déja un compte, je me connecte</p></a>
         </form>
 
     </div>
