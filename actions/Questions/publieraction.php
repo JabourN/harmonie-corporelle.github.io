@@ -14,7 +14,7 @@ if(isset($_POST['validate'])){
 
         $insertQuestionsOnWebsite = $bdd->prepare('INSERT INTO questions(title, description, content, id_author, pseudo_author, date_publication) VALUES (?, ?, ?, ?, ?, ?)');
         $insertQuestionsOnWebsite->execute([$question_title, $question_description, $question_content, $question_id_author, $question_pseudo_author, $question_date]);
-       
+
         $successMsg = "Votre question a bien été publier sur le site";
     }else{
         $errorMsg = "Veuillez compléter tous les champs";

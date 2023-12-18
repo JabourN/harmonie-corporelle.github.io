@@ -19,15 +19,15 @@ include 'includes/head.php';
      ?>
 
     <div class="mb-3">
-        <label for="exampleInputEmaill" class="form-label">Titre de la question</label> 
+        <p>Titre de la question</p> 
         <input type="text" class="form-control" name="title">
     </div> 
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Description de la question</label> 
+        <p>Description de la question</p> 
         <textarea class="form-control" name="description"></textarea>
     </div> 
     <div class="mb-3">
-        <label for="exampleInputEmaill" class="form-label">Contenu de la question</label> 
+        <p>Contenu de la question</p> 
         <textarea class="form-control" name="content"></textarea>
     </div> 
 

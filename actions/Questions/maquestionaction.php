@@ -1,4 +1,5 @@
-<?php require('database.php');
-$getAllmyquestions = $bdd->prepare('SELECT id, title, description, content FROM questions WHERE id_author = ? ORDER BY id DESC');
-$getAllmyquestions->execute(array($_SESSION['id']));
+<?php
+require('database.php');
+$getAllMyQuestions = $bdd->prepare('SELECT id, title, pseudo_author, content, description FROM questions WHERE id_author = ? ORDER BY id DESC');
+$getAllMyQuestions->execute(array($_SESSION['id']));
 ?>
