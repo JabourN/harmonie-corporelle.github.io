@@ -1,49 +1,48 @@
 <?php get_header(); ?>
 
 <main class="mx-auto">
-
-<div class="card" style="mx-auto">
+<div class="card" style="mx-auto; border: none;">
     <div class="card-body">
         <h3 class="card-title">Information personnelle</h3>
 
-        <div class="d-flex justify-content-center">
+        <!-- Première rangée -->
+        <div class="d-flex justify-content-between mb-2">
             <div class="p-2">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <div class="mb-3">
-        <p>Pseudo</p> 
-        <input type="text" class="form-control" name="pseudo">
-    </div> 
-    <div class="mb-3">
-        <p>Nom</p> 
-        <input type="text" class="form-control" name="lastname">
-    </div> 
-    <div class="mb-3">
-        <p>Prénom</p> 
-        <input type="text" class="form-control" name="firstname">
-    </div> 
-    <div class="mb-3">
-        <p>Password</p> 
-        <input type="password" class="form-control" name="password">
-    </div>
+                <p>Nom</p>
+                <input type="text" class="form-control" name="lastname">
             </div>
             <div class="p-2">
-                <p>Âge:
-                    <select name="age">
-                        <?php
-                        // Âge
-                        for ($i = 1; $i <= 150; $i++) {
-                            echo "<option value=\"$i\">$i</option>";
-                        }
-                        ?>
-                    </select>
-                </p>
+                <p>Prénom</p>
+                <input type="text" class="form-control" name="firstname">
             </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <!-- Fin de la première rangée -->
+
+        <!-- Deuxième rangée -->
+        <div class="d-flex justify-content-between mb-2">
             <div class="p-2">
-                <p>E-mail
+                <p>E-mail</p>
                 <input type="email" class="form-control" name="email">
-                </p>
+            </div>
+            <div class="p-2">
+                <p>Âge</p>
+                <select name="age">
+                    <?php
+                    // Âge
+                    for ($i = 1; $i <= 150; $i++) {
+                        echo "<option value=\"$i\">$i</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
+        <!-- Fin de la deuxième rangée -->
+
+        <!-- Troisième rangée -->
+        <div class="d-flex justify-content-between mb-2">
+            <div class="p-2">
+                <p>Pseudo</p>
+                <input type="text" class="form-control" name="pseudo">
             </div>
             <div class="p-2">
                 <details>
@@ -58,6 +57,9 @@
                 </details>
             </div>
         </div>
+        <!-- Fin de la troisième rangée -->
+    </div>
+</div>
 
         <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
    <br>
@@ -84,13 +86,15 @@
         "Je surveille activement mon apport calorique quotidien pour maintenir un poids santé.",
         "Je m’efforce de rester hydraté en buvant suffisamment d’eau tout au long de la journée",
         "Je choisis des aliments en fonction de leur valeur nutritive plutôt que de leur gout seul.",
-        "L’idée de détoxifier mon corps à travers mon alimentation est importante pour mol.",
+        "L’idée de détoxifier mon corps à travers mon alimentation est importante pour moi.",
         "Je m’assure de consommer suffisamment de protéines pour soutenir la récupération après mes séances d’entraînement.",
     );
 
     foreach ($questions as $index => $question) {
-        echo '<div class="question' . ($index > 0 ? ' inactive' : '') . '" id="question' . $index . '">';
+        echo '<div class="question' . ($index > 0 ? ' inactive' : '') . '" id="question' . $index . ' "style="margin: 100px;">' ;
         echo '<h5>' . $question . '</h5>';
+
+        
 
         for ($i = 1; $i <= 7; $i++) {
             if ($i == 1) {
@@ -115,7 +119,7 @@
 
     function changerCouleur(label, index, i) {
         var currentLabels = document.querySelectorAll('label[for^="secteur' + index + '"]');
-        currentLabels.forEach(function (currentLabel) {
+            currentLabels.forEach(function (currentLabel) {
             currentLabel.classList.remove('active');
         });
 
