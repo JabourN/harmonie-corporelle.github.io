@@ -191,7 +191,6 @@ label.active[value= 5], label.active[value= 6], label.active[value= 7]  {
     pointer-events: auto !important;
 }
 
-
 label.inactive {
     opacity: 0.5;
     pointer-events: none;
@@ -200,7 +199,8 @@ label.inactive {
 .label-text {
     display: inline-block;
     margin-right: 10px;
-    margin-left: 10%;
+    margin-left: 10px;
+    margin-top: -10px;
 }
 #Infoperso {
     background-color: #BEB6A5;
