@@ -27,7 +27,7 @@ include 'includes/head.php';
                     <?php echo $questions['content']; ?>
                 </p>
             </div>
-            <a href="harmonie-corporelle/actions/Questions/deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
+            <a href="actions/Questions/deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
         </div>
     <?php
     }
