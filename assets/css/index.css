@@ -1,0 +1,223 @@
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #E9DFC6;
+    color: #403929;
+
+}
+footer{
+    background-color: #757150 ;
+    color: white;
+}
+body{
+    color: #403929;
+    background-color: #E9DFC6;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.navbar{
+    background-color: #E9DFC6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.navbar-nav li {
+    margin-right: 170px;
+}
+
+.dropdown-menu{
+    background-color: #757150 ;
+}
+
+.navbar-nav {
+    margin-left: 10rem; 
+    margin-right: 10rem;
+}
+
+/* PAGE D'IMC */
+#container {
+    color: #403929;
+    max-width: 800px;
+    width: 100%;
+    background-color: #8f965f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Ajout pour centrer le conteneur */
+}
+
+        h3 {
+            color: #403929;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #403929;
+
+        }
+
+        input {
+            width: 100px;
+            background-color: #8f965f;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        textarea {
+            color: #403929;
+            width: 100%;
+            margin-top: 10px;
+        }
+    #btn {
+    margin-top: 10px;
+    background-color: #403929;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    min-width: 150px; /* Ajout de la largeur minimale */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#corpullence{
+  width: 400px;
+  background-color: #8f965f;
+}
+#poids, #taille{
+  background-color: #fff;
+
+}
+
+#Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère, #ObésitéMorbideOuMassiv{
+    width: 400px;
+}
+
+/*PAGE SONDAGE */
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+label:nth-of-type(1),
+label:nth-of-type(2),
+label:nth-of-type(3) {
+    border-color: #DE9339;
+}
+
+label:nth-of-type(4) {
+    border-color: #fff;
+}
+
+label:nth-of-type(5),
+label:nth-of-type(6),
+label:nth-of-type(7) {
+    border-color: #8F965F;
+}
+
+label:nth-of-type(1),
+label:nth-of-type(7) {
+    width: 60px;
+    height: 60px;
+}
+
+label:nth-of-type(2),
+label:nth-of-type(6) {
+    width: 50px;
+    height: 50px;
+}
+
+label:nth-of-type(3),
+label:nth-of-type(5) {
+    width: 40px;
+    height: 40px;
+}
+
+label:nth-of-type(4) {
+    width: 30px;
+    height: 30px;
+}
+
+label.active[value= 1], label.active[value= 2], label.active[value= 3] {
+    background-color: #DE9339 !important;
+    pointer-events: auto !important;
+}
+label.active[value="4"] {
+    background-color: #fff !important;
+    pointer-events: auto !important;
+}
+label.active[value= 5], label.active[value= 6], label.active[value= 7]  {
+    background-color: #8F965F !important;
+    pointer-events: auto !important;
+}
+
+
+label.inactive {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.label-text {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10%;
+}
+#Infoperso {
+    background-color: #BEB6A5;
+    width: 250px;
+}
+
+
+/*PAGE RESULTATS */
+
+.custom-card-title {
+    font-family: 'Montserrat', sans-serif;
+    background: #393727;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px;
+    border-radius: 10px;
+    color: #000000; 
+}
