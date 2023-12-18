@@ -1,5 +1,5 @@
 <?php require('actions/Questions/editeraction.php');
-require('actions/Utilisateurs/securiteaction.php');
+//require('actions/Utilisateurs/securiteaction.php');
 ?>
 <?php
 include 'includes/head.php';

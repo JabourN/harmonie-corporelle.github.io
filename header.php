@@ -113,7 +113,7 @@
                 document.getElementById("popup-content").innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "http://localhost:8888/harmonie-corporelle/inscription/", true);
+        xhttp.open("GET", "http://localhost:8888/harmonie-corporelle/connexion/", true);
         xhttp.send();
     }
 </script>
