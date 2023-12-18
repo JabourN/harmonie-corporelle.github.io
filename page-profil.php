@@ -46,7 +46,7 @@
             }
         ?>  
     </div>
-          <input class="nav-link" href="http://localhost:8888/harmonie-corporelle/connexion/">Déconnexion</input>
+    <a href="actions/Utilisateurs/deconnexion.php?id=<?= $question['id']; ?>" class="btn btn-primary">Déconnexion</a>
 
 </body>
 </html>

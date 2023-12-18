@@ -1,6 +1,5 @@
-<?php 
+<?php  require('actions/Questions/postAnswerAction.php');
     require('actions/Questions/showArticleContentAction.php'); 
-    require('actions/Questions/postAnswerAction.php');
     require('actions/Questions/showAllAnswersOfQuestionAction.php');
 ?>
 <?php get_header(); ?>
@@ -26,14 +25,14 @@
                     <hr>
                     <p><?= $question_content; ?></p>
                     <hr>
-                    <small><?= '<a href="profile.php?id='.$question_id_author.'">'.$question_pseudo_author . '</a> ' . $question_publication_date; ?></small>
+                    <small><?= '<a href="http://localhost:8888/harmonie-corporelle/profil/?id='.$question_id_author.'">'.$question_pseudo_author . '</a> ' . $question_publication_date; ?></small>
                 </section>
                 <br>
                 <section class="show-answers">
 
                     <form class="form-group" method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Réponse :</label>
+                            <p for="exampleInputEmail1" class="form-label">Commenter :</p>
                             <textarea name="answer" class="form-control"></textarea>
                             <br>
                             <button class="btn btn-primary" type="submit" name="validate">Répondre</button>

@@ -1,4 +1,7 @@
-
+<?php
+require('actions/Utilisateurs/connexionaction.php');
+include 'includes/head.php';
+require('actions/Utilisateurs/securiteaction.php'); ?>
 <?php get_header(); ?> 
 <!-- MAIN -->
 <main class="mx-auto">
