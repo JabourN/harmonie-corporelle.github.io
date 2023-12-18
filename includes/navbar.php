@@ -15,9 +15,6 @@
         <li class="nav-item">
           <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/forum/">Mes questions</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/connexion/">Déconnexion</a>
-        </li>
        </ul>
        <!-- Image Trigger for Pop-up -->
 <p src="<?php echo get_template_directory_uri(); ?>/assets/images/connexion.png " alt="connexion" id="open-popup-image">Se connecter</p>
