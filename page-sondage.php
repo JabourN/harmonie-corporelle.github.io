@@ -1,74 +1,85 @@
-<?php get_header(); ?>
 
-<main class="mx-auto">
-<div class="card" style="mx-auto; border: none;">
-    <div class="card-body">
-        <h3 class="card-title">Information personnelle</h3>
 
-        <!-- Première rangée -->
-        <div class="d-flex justify-content-between mb-2">
-            <div class="p-2">
-                <p>Nom</p>
-                <input type="text" class="form-control" name="lastname">
-            </div>
-            <div class="p-2">
-                <p>Prénom</p>
-                <input type="text" class="form-control" name="firstname">
-            </div>
+
+  <?php include 'includes/head.php'; ?>
+
+  <?php get_header(); ?>
+  
+  <form class="container" method="POST">
+  <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
+
+  <div class="card" style="border: none; margin-top: 30px">
+    <div class="card-body mx-auto text-center">
+      <h3 class="card-title mx-auto">Inscription</h3>
+
+      <!-- Première rangée -->
+      <div class="d-flex justify-content-between mb-2">
+        <div class="p-2">
+          <p>Nom</p>
+          <input type="text" class="form-control" name="lastname">
         </div>
-        <!-- Fin de la première rangée -->
-
-        <!-- Deuxième rangée -->
-        <div class="d-flex justify-content-between mb-2">
-            <div class="p-2">
-                <p>E-mail</p>
-                <input type="email" class="form-control" name="email">
-            </div>
-            <div class="p-2">
-                <p>Âge</p>
-                <select name="age">
-                    <?php
-                    // Âge
-                    for ($i = 1; $i <= 150; $i++) {
-                        echo "<option value=\"$i\">$i</option>";
-                    }
-                    ?>
-                </select>
-            </div>
+        <div class="p-2">
+          <p>Prénom</p>
+          <input type="text" class="form-control" name="firstname">
         </div>
-        <!-- Fin de la deuxième rangée -->
+      </div>
 
-        <!-- Troisième rangée -->
-        <div class="d-flex justify-content-between mb-2">
-            <div class="p-2">
-                <p>Pseudo</p>
-                <input type="text" class="form-control" name="pseudo">
-            </div>
-            <div class="p-2">
-                <details>
-                    <summary>Informations additionnelles</summary>
-                    <p>Sexe
-                        <select name="sexe">
-                            <option value="M">Masculin</option>
-                            <option value="F">Féminin</option>
-                            <option value="NB">Non binaire</option>
-                        </select>
-                    </p>
-                </details>
-            </div>
+      <!-- Deuxième rangée -->
+      <div class="d-flex justify-content-between mb-1">
+        <div class="p-2">
+          <p>E-mail</p>
+          <input type="email" class="form-control" name="email">
         </div>
-        <!-- Fin de la troisième rangée -->
+        <div class="p-2">
+          <p>Âge</p>
+          <select name="age">
+            <?php
+            // Âge
+            for ($i = 1; $i <= 150; $i++) {
+              echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
+          </select>
+        </div>
+      </div>
+
+      <!-- Troisième rangée -->
+      <div class="d-flex justify-content-between mb-2">
+        <div class="p-2">
+          <p>Pseudo</p>
+          <input type="text" class="form-control" name="pseudo">
+        </div>
+        <div class="p-2">
+          <details>
+            <summary>Informations additionnelles</summary>
+            <p>Sexe
+              <select name="sexe">
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+                <option value="NB">Non binaire</option>
+              </select>
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mb-2">
+        <div class="p-2">
+          <p>Password</p>
+          <input type="password" class="form-control" name="password">
+        </div>
+      </div>
+
+      <div class="btn-container text-center">
+        <button type="submit" class="btn btn-custom" name="validate"><span>S'inscrire</span></button>
+        <br>
+        <a href="http://localhost:8888/harmonie-corporelle/connexion/"><p>J'ai déjà un compte, je me connecte</p></a>
+      </div>
     </div>
-</div>
+  </div>
+</form>
 
-        <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
-   <br>
-    <a href="http://localhost:8888/harmonie-corporelle/connexion/"><p>J'ai déja un compte, je me connecte</p></a>
-        </form>
 
-    </div>
-</div>
-</div>
 
 
 <div class="mx-auto text-center">
