@@ -25,9 +25,9 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
         $question_publication_date = $questionsInfos['date_publication'];
         
     }else{
-        $errorMsg = "Aucune question n'a été trouvée";
+        $errorMsg = "Aucun commentaire n'a été trouvé.";
     }
 
 }else{
-    $errorMsg = "Aucune question n'a été trouvée";
+    $errorMsg = "Aucun commentaire n'a été trouvé.";
 }
