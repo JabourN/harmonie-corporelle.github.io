@@ -1,45 +1,54 @@
+@media only screen and (max-width: 600px) {
+    /* Styles spécifiques pour les écrans de 600 pixels de largeur ou moins */
+  }
 main {
     max-width: 100%;
     margin: 0 auto;
 }
 
 header{
-    background-color: #E9DFC6;
-    color: #403929;
-
+    background-color: #403929;
 }
 h1{
     text-align: center;
 }
 footer{
-    background-color: #757150 ;
-    color: white;
+    background-color: #e8dec6b0 ;
+    color: #8F965F;
 }
 body{
     color: #403929;
-    background-color: #E9DFC6;
+    background-color: #e8dec665;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 
 }
-.navbar{
-    background-color: #E9DFC6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* Espacement entre les liens de navigation */
+.navbar-nav .nav-item .nav-link,
+.navbar-nav .nav-item .dropdown-menu a {
+    padding: 5px 10px; /* Ajustez la valeur selon vos préférences */
+    margin-right: 3cm; /* Espacement entre les éléments */
+    color:#E8DEC6 ; /* Couleur du texte */
+}
+
+/* Centrage du texte à l'intérieur de chaque élément de navigation */
+.navbar-nav .nav-item {
     text-align: center;
 }
-.navbar-nav li {
-    margin-right: 190px;
+
+
+/* Style du lien de navigation au survol */
+.navbar-nav .nav-item:hover .nav-link,
+.navbar-nav .nav-item:hover .dropdown-menu a {
+    color: #8F965F; /* Couleur du texte au survol */
+    text-decoration: underline #403929; /* Soulignement de la même couleur */
 }
 
-.dropdown-menu{
-    background-color: #757150 ;
-}
 
-.navbar-nav {
-    margin-left: 10rem; 
-    margin-right: 10rem;
+/* Centrage de la barre de navigation */
+.container-fluid {
+    display: flex;
+    justify-content: center;
 }
 
 /* PAGE D'IMC */
@@ -68,6 +77,10 @@ body{
         input {
             width: 100px;
             background-color: #8f965f;
+        }
+
+        #nextBtn{
+            background-color: #8F965F;
         }
 
         button {
