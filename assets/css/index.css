@@ -51,6 +51,61 @@ body{
     justify-content: center;
 }
 
+/* PAGE D'ACCUEIL */ 
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px; /* Ajoutez des marges selon vos préférences */
+}
+
+.custom-card.accueil-card {
+    display: flex;
+    width: 30%; /* Ajustez la largeur selon vos préférences */
+    margin-bottom: 20px; /* Ajoutez des marges selon vos préférences */
+}
+
+.custom-card.accueil-card .card-image {
+    width: 50%; /* Ajustez la largeur de l'image selon vos préférences */
+    object-fit: cover;
+}
+
+.custom-card.accueil-card .card-content {
+    flex-grow: 1;
+    padding: 10px; /* Ajoutez un remplissage selon vos préférences */
+}
+
+.custom-card.accueil-card .accueil-title {
+    font-size: 1.5rem; /* Ajustez la taille de la police selon vos préférences */
+    margin-bottom: 10px; /* Ajoutez des marges selon vos préférences */
+}
+
+.partial-visible-carousel .carousel-inner {
+    display: flex;
+}
+
+.partial-visible-carousel .carousel-item {
+    transition: transform 0.5s ease;
+}
+
+.partial-visible-carousel .carousel-item-next,
+.partial-visible-carousel .carousel-item-prev,
+.partial-visible-carousel .carousel-item.active {
+    transform: translateX(0);
+}
+
+.partial-visible-carousel .carousel-item-next {
+    transform: translateX(25%); /* Ajustez le pourcentage selon vos besoins */
+}
+
+.partial-visible-carousel .carousel-item-prev {
+    transform: translateX(-25%); /* Ajustez le pourcentage selon vos besoins */
+}
+
+
+
+
+
 /* PAGE D'IMC */
 #container {
     color: #403929;
