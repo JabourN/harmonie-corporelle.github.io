@@ -52,7 +52,7 @@ if (corpullence <= 16.5) {
 function highlightRow(rowId, shouldHighlight) {
     var row = document.getElementById(rowId);
     if (shouldHighlight) {
-        row.style.backgroundColor = '#FF66B2'; // Rose fluo
+        row.style.backgroundColor = '#DE9339'; // Orange
     } else {
         row.style.backgroundColor = ''; // Réinitialiser la couleur de fond
     }
