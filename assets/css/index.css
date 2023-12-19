@@ -79,6 +79,10 @@ body{
             background-color: #8f965f;
         }
 
+        #nextBtn{
+            background-color: #8F965F;
+        }
+
         button {
             padding: 5px 10px;
             background-color: #4CAF50;
