@@ -40,11 +40,7 @@
     </div>
 
 <!-- Partie 2 : Calculatrice -->
-<p>L'Indice de Masse Corporelle (IMC) est bien plus qu'un simple chiffre. Il est le reflet de notre équilibre physique, un indicateur essentiel dans notre quête d'harmonie corporelle. Calculé à partir de notre poids et de notre taille, l'IMC offre un aperçu global de notre santé physique.
-
-Cependant, l'harmonie corporelle va au-delà des chiffres. Elle s'enracine dans les bonnes habitudes et une nutrition équilibrée. Adopter des choix alimentaires judicieux, pratiquer une activité physique régulière et cultiver une relation positive avec notre corps contribuent à créer cet équilibre tant recherché.
-
-Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devient un compagnon, non pas de jugement, mais de compréhension. Ensemble, cultivons des habitudes saines, embrassons la nutrition éclairée, et célébrons la diversité des chemins menant à une vie équilibrée et épanouissante.</p>
+<p> </p>
     <div id="container">
         <h3>Calculatrice de l'IMC :</h3>
         <p>Entrez votre poids (en kg)
