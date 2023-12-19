@@ -1,4 +1,4 @@
-<?php require('actions/Utilisateurs/inscriptionaction.php'); ?> 
+
   <?php include 'includes/head.php'; ?>
 
   <?php get_header(); ?>
@@ -122,7 +122,8 @@
     }
     ?>
 
-<button type="button" id="nextBtn" class="btn btn-secondary" onclick="redirectToResults()">Suivante</button>
+<div class="btn-container text-center">
+        <button type="button" class="btn btn-custom" id="nxtBtn" onclick="redirectToResults()"><span>Résultats</span></button>
 
 <script>
     var currentQuestion = 0;
