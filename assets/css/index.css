@@ -303,3 +303,20 @@ label.inactive {
 }
 
 /*PAGE RESSOURCES */
+
+#navigation a {
+    color: black; /* Couleur du texte noir */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+.podcast-content,
+.livre-content,
+.video-content,
+.default-content {
+   justify-content: center;
+   display: flex;
+   margin-top: 50px; 
+   margin-bottom: 50px; 
+}
+
+

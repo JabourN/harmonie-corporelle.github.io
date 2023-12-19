@@ -2,57 +2,47 @@
 
 <main class="mx-auto">
 <!-- Partie 1 : Carrousel -->
-<div class="container">
-  <div class="row row-cols-auto">
-    <div class="col">
-  <div class="d-flex p-2">
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc1.png" class="d-block w-100" alt="photo de femme en sous vêtement">
-    </a>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <?php
+        $query = new WP_Query(array(
+            'post_type' => 'imc',
+            'posts_per_page' => 2,
+        ));
+
+        while ($query->have_posts()) : $query->the_post();
+        ?>
+        <div class="col mb-4">
+            <div class="card mb-4 mx-auto border-0" style="width: 1300px; height: 850px;">
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="card-img-top">
+                <?php endif; ?>
+                <div class="card-body text-center">
+                    <h5 class="card-title custom-card-title"><?php the_title(); ?></h5>
+                    <p class="card-text"><?php the_content(); ?></p>
+                </div>
+            </div>
+        </div>
+        <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
     </div>
-    <div class="carousel-item">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc2.png" class="d-block w-100" alt="IMC">
-    </a>    </div>
-    <div class="carousel-item">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc3.png" class="d-block w-100" alt="Forum">
-    </a>    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-</div>
-    </div>
+
 
 <!-- Partie 2 : Calculatrice -->
-<p>L'Indice de Masse Corporelle (IMC) est bien plus qu'un simple chiffre. Il est le reflet de notre équilibre physique, un indicateur essentiel dans notre quête d'harmonie corporelle. Calculé à partir de notre poids et de notre taille, l'IMC offre un aperçu global de notre santé physique.
 
-Cependant, l'harmonie corporelle va au-delà des chiffres. Elle s'enracine dans les bonnes habitudes et une nutrition équilibrée. Adopter des choix alimentaires judicieux, pratiquer une activité physique régulière et cultiver une relation positive avec notre corps contribuent à créer cet équilibre tant recherché.
-
-Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devient un compagnon, non pas de jugement, mais de compréhension. Ensemble, cultivons des habitudes saines, embrassons la nutrition éclairée, et célébrons la diversité des chemins menant à une vie équilibrée et épanouissante.</p>
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
     <div id="container">
-        <h3>Calculatrice de l'IMC :</h3>
-        <p>Entrez votre poids (en kg)
-            <input id="poids">
-        </p>
-        <p>Entrez votre taille (en cm)
-            <input id="taille">
-            <button onclick="AfficheImc()">Calculer</button>
+    <h3>Calculatrice de l'IMC :</h3>
+        <p>Entrez votre poids (en kg) <input id="poids"></p>
+        <p>Entrez votre taille (en cm) <input id="taille"></p>
+        <div class="btn-container text-center">
+          <button class="btn btn-custom" onclick="AfficheImc()"><span>Calculer</span></button>
+        </div>
         </p>
         <p>
             <div>
@@ -62,6 +52,9 @@ Rejoignez-nous dans cette exploration de l'harmonie corporelle, où l'IMC devien
                 <i><input type="text" id="corpullence" disabled="disabled"/></i>
             </div>
         </p>
+    </div>
+        </div>
+        <div class="col-md-6">
         <br> 
         <table>
             <thead>
