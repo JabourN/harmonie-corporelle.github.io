@@ -36,12 +36,14 @@ body{
     text-align: center;
 }
 
+
 /* Style du lien de navigation au survol */
 .navbar-nav .nav-item:hover .nav-link,
 .navbar-nav .nav-item:hover .dropdown-menu a {
     color: #8F965F; /* Couleur du texte au survol */
     text-decoration: underline #403929; /* Soulignement de la même couleur */
 }
+
 
 /* Centrage de la barre de navigation */
 .container-fluid {
