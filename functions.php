@@ -35,6 +35,23 @@ function montheme_menu_link_class($attrs) {
 add_filter('nav_menu_css_class', 'montheme_menu_class');
 add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
 
+// ACCUEIL
+
+function create_accueil_posttypes() {
+    register_post_type('accueil', [
+        'labels' => [
+            'name' => ( 'accueil' ),
+            'singular_name' => ( 'accueil' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'accueil'],
+        'show_in_rest' => false,
+    ]);
+}
+add_action('init', 'create_accueil_posttypes');
+
 // EXPERTS
 
 function create_experts_posttypes() {
