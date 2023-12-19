@@ -69,6 +69,23 @@ function create_resultats_posttypes() {
 }
 add_action('init', 'create_resultats_posttypes');
 
+// IMC 
+
+function create_IMC_posttypes() {
+    register_post_type('imc', [
+        'labels' => [
+            'name' => ( 'imc' ),
+            'singular_name' => ( 'imc' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'imc'],
+        'show_in_rest' => false,
+    ]);
+}
+add_action('init', 'create_IMC_posttypes');
+
 // RESSOURCES
 function attribuer_categorie_dates_automatiquement() {
     $args = array(
