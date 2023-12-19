@@ -1,5 +1,4 @@
-<?php require('actions/Utilisateurs/inscriptionaction.php'); ?> 
-  <?php include 'includes/head.php'; ?>
+
 
   <?php get_header(); ?>
   
@@ -7,6 +6,7 @@
 
   <?php if(isset($errorMsg)){ 
     echo '<p>'.$errorMsg.'</p>'; } ?>
+
 
   <div class="card" style="border: none; margin-top: 30px">
     <div class="card-body mx-auto text-center">
