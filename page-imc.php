@@ -1,106 +1,116 @@
 <?php get_header(); ?>
 
 <main class="mx-auto">
-<!-- Partie 1 : Carrousel -->
-<div class="container">
-  <div class="row row-cols-auto">
-    <div class="col">
-  <div class="d-flex p-2">
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc1.png" class="d-block w-100" alt="photo de femme en sous vêtement">
-    </a>
+
+    <!-- Partie 1 : Carrousel -->
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <?php
+            $query = new WP_Query(array(
+                'post_type' => 'imc',
+                'posts_per_page' => 2,
+            ));
+
+            while ($query->have_posts()) : $query->the_post();
+            ?>
+                <div class="col mb-4">
+                    <div class="card mb-4 mx-auto border-0" style="width: 1300px; height: 830px;">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <!-- Ajoutez ici votre code pour l'image -->
+                        <?php endif; ?>
+                        <div class="card-body text-center" style="margin-top: 20px;">
+                            <h5><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_content(); ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            endwhile;
+            wp_reset_postdata();
+            ?>
+        </div>
     </div>
-    <div class="carousel-item">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc2.png" class="d-block w-100" alt="IMC">
-    </a>    </div>
-    <div class="carousel-item">
-    <a class="icon-link" href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/imc3.png" class="d-block w-100" alt="Forum">
-    </a>    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-    </div>
+
 
 <!-- Partie 2 : Calculatrice -->
-<p> </p>
-    <div id="container">
-        <h3>Calculatrice de l'IMC :</h3>
-        <p>Entrez votre poids (en kg)
-            <input id="poids">
-        </p>
-        <p>Entrez votre taille (en cm)
-            <input id="taille">
-            <button onclick="AfficheImc()">Calculer</button>
-        </p>
-        <p>
-            <div>
-                Avec un poids de <input type="text" id="Lepoids" disabled="disabled"/> kilos et une taille de 
+<div class="container mt-4">
+        <div class="row d-flex justify-content-between">
+            <!-- Card 1 : Calculatrice de l'IMC -->
+            <div class="col-md-6 mb-4">
+            <div class="card carte-verte"  style="height: 594px;">
+                    <div class="card-body text-center">
+                    <h3 class="card-title">Calculatrice de l'IMC :</h3>
+                    <p>Entrez votre poids (en kg) <input id="poids"></p>
+                    <p>Entrez votre taille (en cm) <input id="taille"></p>
+                    <div class="btn-container text-center">
+                        <button class="btn btn-custom" onclick="AfficheImc()"><span>Calculer</span></button>
+                </p>
+                <p>
+                    <div>
+              Avec un poids de <input type="text" id="Lepoids" disabled="disabled"/> kilos et une taille de 
                 <input type="text" id="Lataille" disabled="disabled"/> mètres, votre indice de masse corporelle 
-                est <b><input type="text" id="imc" disabled="disabled"/></b> et
-                <i><input type="text" id="corpullence" disabled="disabled"/></i>
-            </div>
-        </p>
-        <br> 
-        <table>
-            <thead>
-                <tr>
-                    <th>Poids Maximum</th>
-                    <th>&emsp;Description</th>
-                </tr> 
-            </thead>
-            <tbody> 
-                <tr>
-                    <td><input type="text" id="Dénutrition" disabled="disabled"/></td>
-                    <td>&emsp;Dénutrition</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="Maigreur" disabled="disabled"></td>
-                    <td>&emsp;Maigreur</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="Poidnormal" disabled="disabled"></td>
-                    <td>&emsp;Poids normal</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="Surpoids" disabled="disabled"></td>
-                    <td>&emsp;Surpoids</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="Obésitémodérée" disabled="disabled"></td>
-                    <td>&emsp;Obésité modérée</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="Obésitésévère" disabled="disabled"></td>
-                    <td>&emsp;Obésité sévère</td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="ObésitéMorbideOuMassiv" disabled="disabled"></td>
-                    <td>&emsp;Obésité morbide ou massive</td>
-                </tr> 
-            </tbody>
-        </table>
+                 est <b><input type="text" id="imc" disabled="disabled"/></b> et
+                 <i><input type="text" id="corpullence" disabled="disabled"/></i>
+                    </div>
+                </p>
 
-        <br />
- <i><input type="button" id="btn" value="Sauvegarde" /></i>
-
-</main>
      
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- Card 2 : Descriptions et Poids Maximum -->
+        <div class="col-md-6 mb-4">
+                <div class="card carte-verte1" style="width: 600px;">
+                    <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Poids Maximum</th>
+                                <th>Description</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                         <td><input type="text" id="Dénutrition" disabled="disabled"/></td>
+                          <td>Dénutrition</td>
+                            </tr>
+                    <tr>
+                        <td><input type="text" id="Maigreur" disabled="disabled"></td>
+                        <td>Maigreur</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="Poidnormal" disabled="disabled"></td>
+                        <td>Poids normal</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="Surpoids" disabled="disabled"></td>
+                        <td>Surpoids</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="Obésitémodérée" disabled="disabled"></td>
+                        <td>Obésité modérée</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="Obésitésévère" disabled="disabled"></td>
+                        <td>Obésité sévère</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="ObésitéMorbideOuMassiv" disabled="disabled"></td>
+                        <td>Obésité morbide ou massive</td>
+                    </tr> 
+                </tbody>
+            </table>
+            <!-- Bouton Sauvegarde -->
+            <div class="text-center">
+                <i><input type="button" id="btn" value="Sauvegarde" class="btn btn-custom" /></i>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+    </div></div>
+
+
 <?php get_footer() ?>

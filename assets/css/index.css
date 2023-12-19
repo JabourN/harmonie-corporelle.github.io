@@ -60,68 +60,81 @@ body{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Ajout pour centrer le conteneur */
+    margin: 0 auto;
 }
 
-        h3 {
-            color: #403929;
-            text-align: center;
-        }
+h3 {
+    color: #403929;
+    text-align: center;
+}
 
-        p {
-            margin-bottom: 10px;
-            color: #403929;
+p {
+    margin-bottom: 10px;
+    color: #403929;
+}
 
-        }
+input {
+    width: 100px;
+    background-color: #ffffff;
+}
 
-        input {
-            width: 100px;
-            background-color: #8f965f;
-        }
+.carte-verte {
+    background-color: #CDD29C; 
+     margin: 0; 
+    border: none; 
+    border-radius: 0;
+}
+.carte-verte1 {
+    background-color: #ffffff; 
+    margin: 0; 
+    border: none; 
+    border-radius: 0;
+}
 
-        #nextBtn{
-            background-color: #8F965F;
-        }
+#nextBtn {
+    background-color: #8f965f;
+}
 
-        button {
-            padding: 5px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+table, th, td {
+    border: 1px solid #ddd;
+}
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+th, td {
+    padding: 10px;
+    text-align: left;
+}
 
-        thead {
-            background-color: #f2f2f2;
-        }
+thead {
+    background-color: #f2f2f2;
+}
 
-        textarea {
-            color: #403929;
-            width: 100%;
-            margin-top: 10px;
-        }
-    #btn {
+textarea {
+    color: #ffffff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#btn {
     margin-top: 10px;
     background-color: #403929;
     color: white;
     border: none;
     padding: 10px 20px;
-    min-width: 150px; /* Ajout de la largeur minimale */
+    min-width: 150px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -129,18 +142,24 @@ body{
     cursor: pointer;
     border-radius: 4px;
 }
-#corpullence{
-  width: 400px;
-  background-color: #8f965f;
-}
-#poids, #taille{
-  background-color: #fff;
 
-}
-
-#Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère, #ObésitéMorbideOuMassiv{
+#corpullence {
     width: 400px;
+    background-color: #ffffff;
 }
+
+#poids, #taille {
+    background-color: #ffffff;
+    border: none;
+}
+
+#Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère, #ObésitéMorbideOuMassiv {
+    width: 400px;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+}
+
 
 /*PAGE SONDAGE */
 
