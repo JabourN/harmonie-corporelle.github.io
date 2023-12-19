@@ -144,13 +144,14 @@ textarea {
 }
 
 #corpullence {
-    width: 400px;
+    width: 355px;
     background-color: #ffffff;
 }
 
 #poids, #taille {
     background-color: #ffffff;
     border: none;
+    margin: 20px;
 }
 
 #Dénutrition, #Maigreur, #Poidnormal, #Surpoids, #Obésitémodérée, #Obésitésévère, #ObésitéMorbideOuMassiv {

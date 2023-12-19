@@ -14,7 +14,7 @@
             while ($query->have_posts()) : $query->the_post();
             ?>
                 <div class="col mb-4">
-                    <div class="card mb-4 mx-auto border-0" style="width: 1300px; height: 830px;">
+                    <div class="card mb-4 mx-auto border-0" style="width: 1300px; height: 840px;">
                         <?php if (has_post_thumbnail()) : ?>
                             <!-- Ajoutez ici votre code pour l'image -->
                         <?php endif; ?>
@@ -33,32 +33,32 @@
 
 
 <!-- Partie 2 : Calculatrice -->
-<div class="container mt-4">
-        <div class="row d-flex justify-content-between">
+<div class="container mt-4 mx-auto">
+        <div class="row  d-flex justify-content-center no-gutters">
             <!-- Card 1 : Calculatrice de l'IMC -->
             <div class="col-md-6 mb-4">
             <div class="card carte-verte"  style="height: 594px;">
                     <div class="card-body text-center">
-                    <h3 class="card-title">Calculatrice de l'IMC :</h3>
+                    <h3 class="card-title mb-3">Calculatrice de l'IMC :</h3>
                     <p>Entrez votre poids (en kg) <input id="poids"></p>
                     <p>Entrez votre taille (en cm) <input id="taille"></p>
                     <div class="btn-container text-center">
                         <button class="btn btn-custom" onclick="AfficheImc()"><span>Calculer</span></button>
                 </p>
                 <p>
+                    <br> </br>
                     <div>
               Avec un poids de <input type="text" id="Lepoids" disabled="disabled"/> kilos et une taille de 
                 <input type="text" id="Lataille" disabled="disabled"/> mètres, votre indice de masse corporelle 
-                 est <b><input type="text" id="imc" disabled="disabled"/></b> et
+                 est <br> </br><b><input type="text" id="imc" disabled="disabled"/> <br> </br></b> et
                  <i><input type="text" id="corpullence" disabled="disabled"/></i>
                     </div>
                 </p>
-
-     
+              </div>
         </div>
         </div>
         </div>
-        </div>
+        
         <!-- Card 2 : Descriptions et Poids Maximum -->
         <div class="col-md-6 mb-4">
                 <div class="card carte-verte1" style="width: 600px;">
