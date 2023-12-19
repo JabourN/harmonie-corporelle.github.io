@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet"> -->
   <script src="<?php echo get_template_directory_uri(); ?>/index.js"></script>
 
   
@@ -15,24 +15,25 @@
   <?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?> >
 <header>
 
 <style>
         /* Styles for Pop-up Container */
         .popup {
-            display: none;
-            position: fixed;
-            top: 10px; /* Ajuster la distance depuis le haut */
-            right: 10px; /* Ajuster la distance depuis la droite */
-            border: 1px solid #ccc;
-            padding: 20px;
-            background: #fff;
-            z-index: 1;
-            width: 20cm; /* Set the width of the pop-up */
-            height: 10cm; /* Set the height of the pop-up */
-            overflow: auto; /* Add overflow for scrolling if needed */
-        }
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 10px; /* Ajuster la distance depuis la gauche */
+        border: 1px solid #ccc;
+        padding: 20px;
+        background: #fff;
+        z-index: 1;
+        width: 20cm;
+        height: 10cm;
+        overflow: auto;
+    }
 
         /* Style for Close Button */
         .close {
@@ -43,91 +44,104 @@
             cursor: pointer;
         }
 
-        /* Style for Image Trigger */
-        #open-popup-image {
-            position: fixed;
-            top: 10px; /* Ajuster la distance depuis le haut */
-            right: 10px; /* Ajuster la distance depuis la droite */
-            cursor: pointer;
-        }
+        /* Style for Connexion Button */
+   /* Style for Connexion Button */
+#connexion-button {
+    background-color: #e8dec600 ;
+    color:#8F965F ; /* Change the text color to match the background */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s; /* Apply transition to text color */
+}
+
+#connexion-button:hover {
+    color: #403929; /* Change text color on hover */
+}
+
+
 
         /* Additional Styles as Needed */
     </style>
 </head>
 <body>
 
-<!-- Image Trigger for Pop-up -->
-<img width="25" src="<?php echo get_template_directory_uri(); ?>/assets/images/maison.png " alt="Maison" id="open-popup-image">
+    <!-- Bouton Connexion -->
+    <button id="connexion-button" onclick="openPopup()">Connexion</button>
 
-
-<!-- Les icônes -->
-<div class="container">
-    <div class="row row-cols-auto">
-        <div class="col">
-            <a class="icon-link" href="https://www.instagram.com/harmonie.corporellee/">
-                <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_INSTAGRAM.png ">
-            </a>
-        </div>
-        <div class="col">
-            <a class="icon-link" href="https://pin.it/7KwgCRX">
-                <img width="25" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_PINTEREST.png ">
-            </a>
-        </div>
-        <div class="col">
-            <a class="icon-link" href="#">
-                <img width="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/ICÔNE_PODCAST.png ">
-            </a>
-        </div>
+    <!-- Pop-up Container -->
+    <div id="popup-container" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <!-- Content Loaded via AJAX from forum URL -->
+        <div id="popup-content"></div>
     </div>
-</div>
 
-<!-- Pop-up Container -->
-<div id="popup-container" class="popup">
-    <span class="close" onclick="closePopup()">&times;</span>
+    <!-- JavaScript for Pop-up -->
+    <script>
+        // JavaScript for Opening and Closing Pop-up
+        function openPopup() {
+            document.getElementById("popup-container").style.display = "block";
+            loadContentFromForumURL();
+        }
 
-    <!-- Content Loaded via AJAX from forum URL -->
-    <div id="popup-content"></div>
-</div>
+        function closePopup() {
+            document.getElementById("popup-container").style.display = "none";
+        }
 
-<!-- JavaScript for Pop-up -->
-<script>
-    // JavaScript for Opening and Closing Pop-up
-    document.getElementById("open-popup-image").addEventListener("click", function() {
-        openPopup();
-        loadContentFromForumURL();
-    });
-
-    function openPopup() {
-        document.getElementById("popup-container").style.display = "block";
-    }
-
-    function closePopup() {
-        document.getElementById("popup-container").style.display = "none";
-    }
-
-    // AJAX to Load Content from forum URL
-    function loadContentFromForumURL() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("popup-content").innerHTML = this.responseText;
-            }
-        };
-        xhttp.open("GET", "http://localhost:8888/harmonie-corporelle/connexion/", true);
-        xhttp.send();
-    }
-</script>
+        // AJAX to Load Content from forum URL
+        function loadContentFromForumURL() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("popup-content").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "http://localhost:8888/harmonie-corporelle/connexion/", true);
+            xhttp.send();
+        }
+    </script>
 
 <!-- Le logo -->
 <div class="text-center">
     <a href="<?php echo home_url(); ?>">
-        <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
-        alt="Brand logo | <?php bloginfo('title'); ?>" style="max-width: 170px; height: auto;" />
+        <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGOHC.png" 
+        alt="Brand logo | <?php bloginfo('title'); ?>" style="max-width: 120px; height: auto;" />
     </a>
 </div>
 
 
-<!-- NAVBAR -->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-transparent w-100">
+        <!-- Bouton de basculement pour les écrans plus petits -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenu du menu -->
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'header',
+                'container' => false,
+                'menu_class' => 'navbar-nav mb-2 mb-lg-0',
+                'walker' => new Bootstrap_Walker_Nav_Menu(),
+            ]);
+            ?>
+        </div>
+    </nav>
+</div>
+
+<?php
+class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth = 0, $args = null) {
+        $indent = str_repeat("\t", $depth);
+        $submenu = ($depth > 0) ? ' sub-menu' : '';
+        $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\">\n";
+    }
+}
+?>
+
+<!-- NAVBAR 
 
 <nav class="navbar navbar-expand-lg justify-content-center">
     <div class="container-fluid">
@@ -139,6 +153,6 @@
                 ]); ?>
            </ul>
     </div>
-</nav>
+</nav>-->
 
 </header>
