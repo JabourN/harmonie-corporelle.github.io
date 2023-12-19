@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <main class="mx-auto">
+
     <!-- Partie 1 : Carrousel -->
     <div class="container mt-4">
         <div class="row justify-content-center">
@@ -52,6 +53,7 @@
                  <i><input type="text" id="corpullence" disabled="disabled"/></i>
                     </div>
                 </p>
+
      
         </div>
         </div>
