@@ -1,11 +1,19 @@
+<<<<<<< Updated upstream
 <?php require('actions/Utilisateurs/inscriptionaction.php'); ?> 
   <?php include 'includes/head.php'; ?>
+=======
+<?php include 'includes/head.php'; ?>
+>>>>>>> Stashed changes
 
   <?php get_header(); ?>
   
   <form class="container" method="POST">
+<<<<<<< Updated upstream
   <?php if(isset($errorMsg)){ 
     echo '<p>'.$errorMsg.'</p>'; } ?>
+=======
+  <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
+>>>>>>> Stashed changes
 
   <div class="card" style="border: none; margin-top: 30px">
     <div class="card-body mx-auto text-center">
@@ -122,7 +130,8 @@
     }
     ?>
 
-<button type="button" id="nextBtn" class="btn btn-secondary" onclick="redirectToResults()">Suivante</button>
+<div class="btn-container text-center">
+        <button type="submit" class="btn btn-custom" name="validate" onclick="redirectToResults()"><span>Résultats</span></button> 
 
 <script>
     var currentQuestion = 0;
