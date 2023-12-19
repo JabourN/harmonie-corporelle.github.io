@@ -2,6 +2,7 @@
 get_header();
 ?>
 
+<!-- CARROUSEL 1-->
 <div id="carouselExampleIndicators" class="carousel slide partial-visible-carousel">
     <div class="carousel-indicators">
         <?php
@@ -52,10 +53,10 @@ get_header();
                         ?>
                         <div class="carousel-item <?php echo ($item_index === 0) ? 'active' : ''; ?>">
                             <div class="card mx-auto mb-3 rounded-0 border-0" style="max-width: 1000px; height: 494px; margin: 70px 0;">
-                                <div class="row g-0">
+                                <div class="row g-0 align-items-center">
                                     <div class="col-md-5">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title"><?php the_title(); ?></h5>
+                                            <h5 class="card-title mb-4"><?php the_title(); ?></h5>
                                             <p class="card-text"><?php the_content(); ?></p>
                                         </div>
                                     </div>
@@ -88,6 +89,8 @@ get_header();
 </div>
 
 
+<!-- CARD -->
+
 <div class="container mt-4">
     <div class="row justify-content-center">
         <?php
@@ -110,7 +113,9 @@ get_header();
                                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="card-img-top">
                             <?php endif; ?>
                             <div class="card-body text-center">
-                                <h5 class="card-title custom-card-title"><?php the_title(); ?></h5>
+                                <h5 class="card-title custom-card-title">
+                                <a class="custom-link" href="<?php the_permalink(); ?>" ?>
+                                <?php the_title(); ?></a></h5>
                                 <p class="card-text"><?php the_content(); ?></p>
                             </div>
                         </div>
@@ -122,6 +127,69 @@ get_header();
           }
         ?>
     </div>
+</div>
+
+
+
+<!-- CARD POD&LIVRE -->
+
+<?php
+$custom_post_types = array('podcasts', 'livres');
+
+// Initialiser le compteur
+$counter = 1;
+$excluded_titles = array('Thomas Leroy', 'Marie Dubois', 'Emma Martin');
+foreach ($custom_post_types as $post_type) {
+    $args_custom = array(
+        'post_type' => 'accueil',
+        'posts_per_page' => -1,
+    );
+
+    $custom_list = new WP_Query($args_custom);
+
+    if ($custom_list->have_posts()) :
+        while ($custom_list->have_posts()) : $custom_list->the_post();
+
+            // Exclure les articles de type "ressources"
+            if (strpos(get_the_content(), 'ressources') !== false) {
+                continue;
+            }
+
+            $content = get_the_content();
+            if (stripos($content, $post_type) !== false) {
+                ?>
+                <div class="card mx-auto mb-6 rounded-0 border-0" style="max-width: 1300px; height: 499px; margin: 70px 0;">
+                    <div class="row g-0 align-items-center">
+                        <?php if ($counter % 2 !== 0) : ?>
+                            <div class="col-md-6">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="col-md-6">
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-4"><?php the_title(); ?></h5>
+                                <p class="card-text"><?php the_content(); ?></p>
+                            </div>
+                        </div>
+                        <?php if ($counter % 2 === 0) : ?>
+                            <div class="col-md-6">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php
+                $counter++;
+            }
+        endwhile;
+    endif;
+    wp_reset_postdata();
+}
+?>
 </div>
 
 <?php

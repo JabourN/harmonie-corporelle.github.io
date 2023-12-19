@@ -27,7 +27,7 @@ body{
 .navbar-nav .nav-item .nav-link,
 .navbar-nav .nav-item .dropdown-menu a {
     padding: 5px 10px; /* Ajustez la valeur selon vos préférences */
-    margin-right: 3cm; /* Espacement entre les éléments */
+    margin-right: 5cm; /* Espacement entre les éléments */
     color:#E8DEC6 ; /* Couleur du texte */
 }
 
@@ -102,9 +102,15 @@ body{
     transform: translateX(-25%); /* Ajustez le pourcentage selon vos besoins */
 }
 
+.custom-link {
+    text-decoration: none; /* Désactive le soulignement */
+    color: #000;
+}
 
-
-
+.card-title a:hover {
+    text-decoration:#ffffff ; /* Supprimer le soulignement au survol */
+    color: #ffffff; 
+}
 
 /* PAGE D'IMC */
 #container {
@@ -302,12 +308,12 @@ label.inactive {
   position: relative;
   width: 130px;
   height: 35px;
-  color: #000000;
+  color: #ffffff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Montserrat-bold', sans-serif;
+  font-family: 'Montserrat-medium', sans-serif;
   font-weight: 500;
-  background: #8f965f;
+  background: #DE9339;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -327,7 +333,7 @@ label.inactive {
   content: "";
   right: 0;
   bottom: 0;
-  background: #757150;
+  background:#DE9339;
   transition: all 0.3s ease;
 }
 .btn-custom:before{
@@ -345,7 +351,7 @@ label.inactive {
   width: 100%;
 }
 .btn-custom:hover{
-  color: #757150;
+  color: #DE9339;
 }
 .btn-custom span:before,
 .btn-custom span:after {
@@ -353,7 +359,7 @@ label.inactive {
   content: "";
   left: 0;
   top: 0;
-  background: #757150;
+  background: #DE9339;
   transition: all 0.3s ease;
 }
 .btn-custom span:before {
@@ -380,7 +386,7 @@ label.inactive {
 
 .custom-card-title {
     font-family: 'Montserrat', sans-serif;
-    background: #393727;
+    background: #DE9339;
     position: absolute;
     top: 35%;
     left: 50%;
