@@ -83,3 +83,13 @@ function now(id) {
 }
 
 
+/* ACCUEIL */
+
+document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.querySelector('.partial-visible-carousel');
+    var items = carousel.querySelectorAll('.carousel-item');
+
+    items[0].classList.add('active');
+    items[1].classList.add('active');
+});
+

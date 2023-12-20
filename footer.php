@@ -23,11 +23,14 @@
 <div class="container overflow-hidden text-center">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3"><?php echo 'NEWSLETTER'; ?></div>
-    </div>
-    <div class="col-6">
-      <div class="p-3"><?php echo 'POSTULER'; ?></div>
-    </div>
+     <div class="p-3">
+      <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('mentions-legales'))); ?>">Mentions légales</a></li>
+      </div></div>
+       <div class="col-6">
+      <div class="p-3">
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('politique-de-confidentialité'))); ?>">Politique de confidentialité</a></li>
+    </div></div>
+
     <div class="col-6">
       <div class="p-3"><?php echo 'COMMENTAIRE'; ?></div>
     </div>

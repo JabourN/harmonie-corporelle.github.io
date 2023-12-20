@@ -49,6 +49,28 @@ function create_accueil_posttypes() {
         'rewrite' => ['slug' => 'accueil'],
         'show_in_rest' => false,
     ]);
+    register_post_type('testimonials', [
+        'labels' => [
+            'name' => ( 'Testimonials' ),
+            'singular_name' => ( 'Testimonials' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'testimonials'],
+        'show_in_rest' => false,
+    ]);
+    register_post_type('carrousel', [
+        'labels' => [
+            'name' => ( 'Carrousel' ),
+            'singular_name' => ( 'Carrousel' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'testimonials'],
+        'show_in_rest' => false,
+    ]);
 }
 add_action('init', 'create_accueil_posttypes');
 

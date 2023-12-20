@@ -11,9 +11,9 @@
         while ($query->have_posts()) : $query->the_post();
         ?>
         <div class="col mb-4">
-            <div class="card mb-4 mx-auto border-0" style="width: 500px; height: 700px; position: relative;">
+            <div class="card mb-4 mx-auto border-0 rounded-0" style="width: 500px; height: 700px; position: relative;">
                 <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="card-img-top">
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="card-img-top rounded-0">
                 <?php endif; ?>
                 <div class="card-body text-center">
                     <h5 class="card-title custom-card-title"><?php the_title(); ?></h5>

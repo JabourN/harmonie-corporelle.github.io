@@ -27,7 +27,7 @@ body{
 .navbar-nav .nav-item .nav-link,
 .navbar-nav .nav-item .dropdown-menu a {
     padding: 5px 10px; /* Ajustez la valeur selon vos préférences */
-    margin-right: 3cm; /* Espacement entre les éléments */
+    margin-right: 5cm; /* Espacement entre les éléments */
     color:#E8DEC6 ; /* Couleur du texte */
 }
 
@@ -49,6 +49,67 @@ body{
 .container-fluid {
     display: flex;
     justify-content: center;
+}
+
+/* PAGE D'ACCUEIL */ 
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px; /* Ajoutez des marges selon vos préférences */
+}
+
+.custom-card.accueil-card {
+    display: flex;
+    width: 30%; /* Ajustez la largeur selon vos préférences */
+    margin-bottom: 20px; /* Ajoutez des marges selon vos préférences */
+}
+
+.custom-card.accueil-card .card-image {
+    width: 50%; /* Ajustez la largeur de l'image selon vos préférences */
+    object-fit: cover;
+}
+
+.custom-card.accueil-card .card-content {
+    flex-grow: 1;
+    padding: 10px; /* Ajoutez un remplissage selon vos préférences */
+}
+
+.custom-card.accueil-card .accueil-title {
+    font-size: 1.5rem; /* Ajustez la taille de la police selon vos préférences */
+    margin-bottom: 10px; /* Ajoutez des marges selon vos préférences */
+}
+
+.partial-visible-carousel .carousel-inner {
+    display: flex;
+}
+
+.partial-visible-carousel .carousel-item {
+    transition: transform 0.5s ease;
+}
+
+.partial-visible-carousel .carousel-item-next,
+.partial-visible-carousel .carousel-item-prev,
+.partial-visible-carousel .carousel-item.active {
+    transform: translateX(0);
+}
+
+.partial-visible-carousel .carousel-item-next {
+    transform: translateX(25%); /* Ajustez le pourcentage selon vos besoins */
+}
+
+.partial-visible-carousel .carousel-item-prev {
+    transform: translateX(-25%); /* Ajustez le pourcentage selon vos besoins */
+}
+
+.custom-link {
+    text-decoration: none; /* Désactive le soulignement */
+    color: #000;
+}
+
+.card-title a:hover {
+    text-decoration:#ffffff ; /* Supprimer le soulignement au survol */
+    color: #ffffff; 
 }
 
 /* PAGE D'IMC */
@@ -247,12 +308,12 @@ label.inactive {
   position: relative;
   width: 130px;
   height: 35px;
-  color: #000000;
+  color: #ffffff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Montserrat-bold', sans-serif;
+  font-family: 'Montserrat-medium', sans-serif;
   font-weight: 500;
-  background: #8f965f;
+  background: #DE9339;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -272,7 +333,7 @@ label.inactive {
   content: "";
   right: 0;
   bottom: 0;
-  background: #757150;
+  background:#DE9339;
   transition: all 0.3s ease;
 }
 .btn-custom:before{
@@ -290,7 +351,7 @@ label.inactive {
   width: 100%;
 }
 .btn-custom:hover{
-  color: #757150;
+  color: #DE9339;
 }
 .btn-custom span:before,
 .btn-custom span:after {
@@ -298,7 +359,7 @@ label.inactive {
   content: "";
   left: 0;
   top: 0;
-  background: #757150;
+  background: #DE9339;
   transition: all 0.3s ease;
 }
 .btn-custom span:before {
@@ -325,7 +386,7 @@ label.inactive {
 
 .custom-card-title {
     font-family: 'Montserrat', sans-serif;
-    background: #393727;
+    background: #DE9339;
     position: absolute;
     top: 35%;
     left: 50%;
@@ -347,6 +408,7 @@ label.inactive {
 .video-content,
 .default-content {
    justify-content: center;
+   flex-direction: column;
    display: flex;
    margin-top: 50px; 
    margin-bottom: 50px; 
