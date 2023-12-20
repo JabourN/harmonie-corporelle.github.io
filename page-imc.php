@@ -196,17 +196,6 @@ function now(id) {
         now(id);
     }, 1000);
 }
-<!-- ... Votre code existant ... -->
-document.getElementById("btn").addEventListener("click", function() {
-    var poids = document.getElementById("Lepoids").value;
-    var taille = document.getElementById("Lataille").value;
-    var imc = document.getElementById("imc").value;
-    var corpullence = document.getElementById("corpullence").value;
-
-    // Redirection vers la page-sauvegardeimc.php avec les données de l'IMC
-    window.location.href = "chemin/vers/page-sauvegardeimc.php?poids=" + poids + "&taille=" + taille + "&imc=" + imc + "&corpullence=" + corpullence;
-});
-
 </script>
 
 <?php get_footer(); ?>
