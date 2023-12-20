@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/question">Commentaire</a>
+          <a class="nav-link" href="page-forum.php">Commentaire</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/publierquestion/">Publier</a>
+          <a class="nav-link" href="page-question.php">Publier</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8888/harmonie-corporelle/maquestion/">Mes messages</a>
+          <a class="nav-link" href="page-publierquestion.php">Mes messages</a>
         </li>
        </ul>
        <!-- Image Trigger for Pop-up -->
