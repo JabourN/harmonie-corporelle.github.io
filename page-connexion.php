@@ -1,7 +1,7 @@
 <?php
 require('actions/Utilisateurs/connexionaction.php');
 include 'includes/head.php';
-require('actions/Utilisateurs/securiteaction.php'); ?>
+//require('actions/Utilisateurs/securiteaction.php'); ?>
 
 <main>
 
