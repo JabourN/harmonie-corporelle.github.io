@@ -82,13 +82,19 @@ function create_accueil_posttypes() {
         'rewrite' => ['slug' => 'menubis'],
         'show_in_rest' => false,
     ]);
-}
 
-add_action('init', 'create_accueil_posttypes');
 
-// EXPERTS
-
-function create_experts_posttypes() {
+    register_post_type('imc', [
+        'labels' => [
+            'name' => ( 'imc' ),
+            'singular_name' => ( 'imc' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'imc'],
+        'show_in_rest' => false,
+    ]);
     register_post_type('experts', [
         'labels' => [
             'name' => ( 'experts' ),
@@ -100,12 +106,6 @@ function create_experts_posttypes() {
         'rewrite' => ['slug' => 'experts'],
         'show_in_rest' => false,
     ]);
-}
-add_action('init', 'create_experts_posttypes');
-
-// RESULTATS
-
-function create_resultats_posttypes() {
     register_post_type('resultats', [
         'labels' => [
             'name' => ( 'resultats' ),
@@ -118,24 +118,9 @@ function create_resultats_posttypes() {
         'show_in_rest' => false,
     ]);
 }
-add_action('init', 'create_resultats_posttypes');
 
-// IMC 
+add_action('init', 'create_accueil_posttypes');
 
-function create_IMC_posttypes() {
-    register_post_type('imc', [
-        'labels' => [
-            'name' => ( 'imc' ),
-            'singular_name' => ( 'imc' )
-        ],
-        'supports' => ['thumbnail', 'editor', 'title'],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'imc'],
-        'show_in_rest' => false,
-    ]);
-}
-add_action('init', 'create_IMC_posttypes');
 
 // RESSOURCES
 function attribuer_categorie_dates_automatiquement() {

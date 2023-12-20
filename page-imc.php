@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /** Template Name: IMC */ get_header(); ?>
 
 <main class="mx-auto">
 

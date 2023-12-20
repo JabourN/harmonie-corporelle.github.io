@@ -1,3 +1,4 @@
+<?php /** Template Name: FORUM */ get_header(); ?>
 <?php
 /*
 Template Name: Harmonie corporelle -> Forum
@@ -21,4 +22,9 @@ if ( class_exists( 'bbPress' ) ) {
 }
 
 get_footer();
-?>
+
+
+//*<?php 
+    session_start();
+    require('actions/Questions/showAllQuestionsAction.php');
+?> *// 

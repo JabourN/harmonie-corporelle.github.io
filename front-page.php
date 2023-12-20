@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- CARROUSEL 1-->
-<h1>JE SUIS BIEN LA</h1>
+<h1>JE LA FRONT PAGE</h1>
 
 <div class="container">
 

@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /** Template Name: Page Experts */ get_header(); ?>
 
 <?php
 $expertsList = new WP_Query([
@@ -14,9 +14,9 @@ $expertsList = new WP_Query([
     <div class="row g-0">
 <?php if ($counter % 2 !== 0) : ?>
       <div class="col-md-7">
-<?php if (has_post_thumbnail()) : ?>
-       <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
-<?php endif; ?>
+      <?php if (has_post_thumbnail()) : ?>
+            <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
+      <?php endif; ?>
 </div>
 <?php endif; ?>
    <div class="col-md-5">
