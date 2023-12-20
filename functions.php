@@ -68,10 +68,22 @@ function create_accueil_posttypes() {
         'supports' => ['thumbnail', 'editor', 'title'],
         'public' => true,
         'has_archive' => true,
-        'rewrite' => ['slug' => 'testimonials'],
+        'rewrite' => ['slug' => 'carrousel'],
+        'show_in_rest' => false,
+    ]);
+    register_post_type('menubis', [
+        'labels' => [
+            'name' => ( 'menubis' ),
+            'singular_name' => ( 'menubis' )
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'menubis'],
         'show_in_rest' => false,
     ]);
 }
+
 add_action('init', 'create_accueil_posttypes');
 
 // EXPERTS
