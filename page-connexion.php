@@ -18,7 +18,7 @@ include 'includes/head.php';
         </div>
         <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
    
-        <a href="http://localhost:8888/harmonie-corporelle/inscription/"><p>Je n'ai pas de compte, je m'inscris</p></a>
+        <a href="<?php home_url('inscription') ?>"><p>Je n'ai pas de compte, je m'inscris</p></a>
     </form>
 </main>
 

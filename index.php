@@ -114,7 +114,8 @@ get_header();
                             <?php endif; ?>
                             <div class="card-body text-center">
                                 <h5 class="card-title custom-card-title">
-                                <a class="custom-link" href="<?php the_permalink(); ?>" ?>
+                                    
+                                <a class="custom-link" href="<?php // get_field('extralink') != '' ? echo get_field('extralink') : the_permalink(); ?>" ?>
                                 <?php the_title(); ?></a></h5>
                                 <p class="card-text"><?php the_content(); ?></p>
                             </div>
@@ -190,6 +191,23 @@ foreach ($custom_post_types as $post_type) {
     wp_reset_postdata();
 }
 ?>
+
+<div class="container">
+ici
+
+testimonials
+
+<?php
+$testimonialsList = new WP_Query([
+    'post_type' => 'testimonials',
+    'posts_per_page' => 3
+]);
+?>
+
+<?php while ( $testimonialsList->have_posts() ) : $testimonialsList->the_post(); ?>
+    <li><?php the_title(); ?></li>
+<?php endwhile; ?>
+</div>
 </div>
 
 <?php

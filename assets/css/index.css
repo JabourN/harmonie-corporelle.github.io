@@ -408,6 +408,7 @@ label.inactive {
 .video-content,
 .default-content {
    justify-content: center;
+   flex-direction: column;
    display: flex;
    margin-top: 50px; 
    margin-bottom: 50px; 

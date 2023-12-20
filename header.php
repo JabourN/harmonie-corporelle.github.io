@@ -10,7 +10,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/index.js"></script>
 
   
-     <title><?php bloginfo('harmonie-corporelle'); ?></title>
+     <title><?php bloginfo('title'); ?></title>
 
   <?php wp_head(); ?>
 </head>
@@ -96,7 +96,7 @@
                     document.getElementById("popup-content").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "http://localhost:8888/harmonie-corporelle/connexion/", true);
+            xhttp.open("GET", <?= home_url('connexion'); ?>, true);
             xhttp.send();
         }
     </script>
