@@ -107,11 +107,6 @@ body{
     color: #000;
 }
 
-.card-title a:hover {
-    text-decoration:#ffffff ; /* Supprimer le soulignement au survol */
-    color: #ffffff; 
-}
-
 /* PAGE D'IMC */
 #container {
     color: #403929;
@@ -386,14 +381,14 @@ label.inactive {
 
 .custom-card-title {
     font-family: 'Montserrat', sans-serif;
-    background: #DE9339;
+    background: #ffffff;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 6px;
     border-radius: 10px;
-    color: #000000; 
+    color: #DE9339; 
 }
 
 /*PAGE RESSOURCES */

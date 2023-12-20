@@ -1,3 +1,5 @@
+<?php /** Template Name: SONDAGE */ get_header(); ?>
+
 <?php require('actions/Utilisateurs/inscriptionaction.php'); ?>
 
 
