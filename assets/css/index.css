@@ -7,14 +7,14 @@ main {
 }
 
 header{
-    background-color: #403929;
+    background-color: #ffffff00;
 }
 h1{
     text-align: center;
 }
 footer{
-    background-color: #e8dec6b0 ;
-    color: #8F965F;
+    background-color: #8F965F ;
+    color: #403929;
 }
 body{
     color: #403929;
@@ -23,33 +23,29 @@ body{
     font-family: 'Montserrat', sans-serif;
 
 }
-/* Espacement entre les liens de navigation */
 .navbar-nav .nav-item .nav-link,
-.navbar-nav .nav-item .dropdown-menu a {
-    padding: 5px 10px; /* Ajustez la valeur selon vos préférences */
-    margin-right: 5cm; /* Espacement entre les éléments */
-    color:#E8DEC6 ; /* Couleur du texte */
-}
+        .navbar-nav .nav-item .dropdown-menu a {
+            padding: 5px 10px; /* Ajustez la valeur selon vos préférences */
+            margin-right: 5cm; /* Espacement entre les éléments */
+            color: #8F965F; /* Couleur du texte */
+            text-transform: uppercase; /* Met les mots en majuscules */
+        }
 
-/* Centrage du texte à l'intérieur de chaque élément de navigation */
-.navbar-nav .nav-item {
-    text-align: center;
-}
+        /* Centrage du texte à l'intérieur de chaque élément de navigation */
+        .navbar-nav .nav-item {
+            text-align: center;
+        }
 
+        .navbar-nav .nav-item:hover .nav-link,
+        .navbar-nav .nav-item:hover .dropdown-menu a {
+            color: #605220; /* Couleur du texte au survol */
+            text-decoration: underline; /* Soulignement */
+            text-decoration-color: #605220; /* Couleur du soulignement */
+            text-decoration-skip-ink: none; /* Désactive le saut du soulignement */
+            text-underline-offset: 10px; /* Ajuste la position verticale du soulignement */
+            text-decoration-thickness: 10px; /* Épaisseur de la ligne de soulignement */
+        }
 
-/* Style du lien de navigation au survol */
-.navbar-nav .nav-item:hover .nav-link,
-.navbar-nav .nav-item:hover .dropdown-menu a {
-    color: #8F965F; /* Couleur du texte au survol */
-    text-decoration: underline #403929; /* Soulignement de la même couleur */
-}
-
-
-/* Centrage de la barre de navigation */
-.container-fluid {
-    display: flex;
-    justify-content: center;
-}
 
 /* PAGE D'ACCUEIL */ 
 
