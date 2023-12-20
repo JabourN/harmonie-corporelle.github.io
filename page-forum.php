@@ -1,56 +1,24 @@
-<?php 
-    session_start();
-    require('actions/Questions/showAllQuestionsAction.php');
+<?php
+/*
+Template Name: Harmonie corporelle -> Forum
+*/
+
+get_header();
+
+// Vérifiez si bbPress est activé
+if ( class_exists( 'bbPress' ) ) {
+    // Affiche le contenu de la page WordPress
+    while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+
+    // Affiche le contenu du forum bbPress
+    echo do_shortcode('[bbp-forum-index]');
+
+} else {
+    // Affiche un message si bbPress n'est pas activé
+    echo '<p>Le plugin bbPress n\'est pas activé.</p>';
+}
+
+get_footer();
 ?>
-<?php get_header(); ?>
-<!DOCTYPE html>
-<html lang="en">
-<?php include 'includes/head.php'; ?>
-<body>
-    <?php include 'includes/navbar.php'; ?>
-    <br><br>
-
-    <div class="container">
-    
-        <form method="GET">
-
-            <div class="form-group row">
-
-                <div class="col-8">
-                    <input type="search" name="search" class="form-control">
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-success" type="submit">Rechercher</button>
-                </div>
-
-            </div>
-        </form>
-
-        <br>
-
-        <?php 
-            while($question = $getAllQuestions->fetch()){
-                ?>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="article.php?id=<?= $question['id']; ?>">
-                            <?= $question['title']; ?>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <?= $question['description']; ?>
-                    </div>
-                    <div class="card-footer">
-                        Publié par <a href="http://localhost:8888/harmonie-corporelle/profil/?id=<?= $question['id_author']; ?>"><?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?>
-                    </div>
-                </div>
-                <br>
-                <?php
-            }
-        ?>
-
-    </div>
-
-</body>
-</html>
-<?php get_footer(); ?>

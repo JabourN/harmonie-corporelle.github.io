@@ -196,6 +196,7 @@ function now(id) {
         now(id);
     }, 1000);
 }
+
 </script>
 
 <?php get_footer(); ?>
