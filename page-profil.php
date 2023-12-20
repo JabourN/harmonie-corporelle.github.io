@@ -12,41 +12,47 @@
 
     <div class="container">
         <?php 
-            if(isset($errorMsg)){ echo $errorMsg; }
-
-            if(isset($getHisQuestions)){
-
+            // Vérifier si l'utilisateur est connecté
+            if(isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
+                // Afficher les détails de l'utilisateur
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h4>@<?= $user_pseudo; ?></h4>
+                        <h4>@<?= $_SESSION['pseudo']; ?></h4>
                         <hr>
-                        <p><?= $user_lastname . ' ' . $user_firstname; ?></p>
+                        <p><?= $_SESSION['lastname'] . ' ' . $_SESSION['firstname']; ?></p>
                     </div>
                 </div>
                 <br>
+
                 <?php
-                while($question = $getHisQuestions->fetch()){ 
-                    ?>
-                    <div class="card">
-                        <div class="card-header">
-                            <?= $question['title']; ?>
+                // Afficher les questions de l'utilisateur (exemple)
+                if (isset($getHisQuestions)) {
+                    while($question = $getHisQuestions->fetch()){ 
+                        ?>
+                        <div class="card">
+                            <div class="card-header">
+                                <?= $question['titre']; ?>
+                            </div>
+                            <div class="card-body">
+                                <?= $question['description']; ?>
+                            </div>
+                            <div class="card-footer">
+                                Par <?= $question['pseudo_auteur']; ?> le <?= $question['date_publication'];  ?>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <?= $question['description']; ?>
-                        </div>
-                        <div class="card-footer">
-                            Par <?= $question['pseudo_author']; ?> le <?= $question['date_publication'];  ?>
-                        </div>
-                    </div>
-                    <br>
-                    <?php
+                        <br>
+                        <?php
+                    }
                 }
 
+            } else {
+                // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+                header('Location: actions/Utilisateurs/page-connexion.php');
+                exit();
             }
         ?>  
     </div>
-    <a href="actions/Utilisateurs/deconnexion.php?id=<?= $question['id']; ?>" class="btn btn-primary">Déconnexion</a>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php require('actions/Utilisateurs/inscriptionaction.php'); ?>
 
 
   <?php get_header(); ?>
@@ -7,7 +8,7 @@
   <?php if(isset($errorMsg)){ 
     echo '<p>'.$errorMsg.'</p>'; } ?>
 
-
+<?php include 'includes/head.php'; ?>
   <div class="card" style="border: none; margin-top: 30px">
     <div class="card-body mx-auto text-center">
       <h3 class="card-title mx-auto">Inscription</h3>
