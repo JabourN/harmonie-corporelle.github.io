@@ -23,9 +23,9 @@ $args = array(
 $articles = new WP_Query($args);
 ?>
 
-<div id="navigation" class="text-center">
+<div id="navigation" class="text-center mt-5 mb-5">
     <a href="?date=<?php echo date('Ymd', strtotime('-1 day', strtotime($date_actuelle))); ?>"><</a>
-    <span><?php echo date('d/m/Y', strtotime($date_actuelle)); ?></span>
+    <span class="current-date"><?php echo date('d/m/Y', strtotime($date_actuelle)); ?></span>
     <a href="?date=<?php echo date('Ymd', strtotime('+1 day', strtotime($date_actuelle))); ?>">></a>
 </div>
 

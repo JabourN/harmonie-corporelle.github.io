@@ -126,6 +126,10 @@
     }
     ?>
 
+
+
+
+
  <button type="button" id="nextBtn" class="btn btn-secondary btn-container text-center" onclick="redirectToResults ()">Résultats</button> 
 <script>
     var currentQuestion = 0;
@@ -174,6 +178,8 @@
         // Redirigez l'utilisateur vers la page sélectionnée
         window.location.href = randomUrl;
     }
+
+    
 </script>
 
 </div>
