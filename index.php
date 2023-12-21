@@ -25,13 +25,17 @@ get_header();
                         $content = get_the_content();
                         if (stripos($content, $post_type) !== false) {
                             ?>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $indicator_index; ?>" <?php echo ($indicator_index === 0) ? 'class="active"' : ''; ?> aria-label="Slide <?php echo $indicator_index + 1; ?>"></button>
-                            <?php
-                            $indicator_index++;
+                            
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $indicator_index; ?>" 
+                <?php echo ($indicator_index === 0) ? 'class=" carrousel active btn-colored"' : 'class="btn-colored"'; ?> 
+                aria-label="Slide <?php echo $indicator_index + 1; ?>">
+            </button>
+            <?php
+            $indicator_index++;
                         }
                     endwhile;
                 endif;
-                wp_reset_postdata();
+               
             }
             ?>
         </div>
@@ -52,6 +56,7 @@ get_header();
                     while ($carrousel_list->have_posts()) : $carrousel_list->the_post();
                         $content = get_the_content();
                         if (stripos($content, $post_type) !== false) {
+                            $post_slug = get_post_field('post_name', get_the_ID());
                             ?>
                             <div class="carousel-item <?php echo ($item_index === 0) ? 'active' : ''; ?>">
                                 <div class="card mx-auto mb-3 rounded-0 border-0" style="max-width: 1000px; height: 494px; margin: 70px 0;">
@@ -61,7 +66,9 @@ get_header();
                                                 <h5 class="card-title mb-4"><?php the_title(); ?></h5>
                                                 <p class="card-text"><?php the_content(); ?></p>
                                                 <div class="btn-container text-center">
-                                               <button type="submit" class="btn btn-custom" name="validate"><span>ALLEZ-Y</span></button>
+                                                <a href="<?php echo esc_url(home_url('/' . $post_slug)); ?>" class="btn btn-custom" name="validate">
+                                <span>ALLEZ-Y</span>
+                            </a>
                                             </div>
                                             </div>
                                         </div>
@@ -78,17 +85,16 @@ get_header();
                         }
                     endwhile;
                 endif;
-                wp_reset_postdata();
             }
             ?>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" style="background-color: #8f965f;" aria-hidden="true"></span>
+            <span class="visually-hidden" >Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon"style="background-color: #8f965f;" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -105,27 +111,32 @@ get_header();
             'posts_per_page' => 3
         ]);
 
+    
         while ($menubisList->have_posts()) : $menubisList->the_post();
+            $post_slug = get_post_field('post_name', get_the_ID());
         ?>
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card mb-4 mx-auto border-0" style="width: 350px; height: 550px; position: relative;">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="card-img-top">
-                    <?php endif; ?>
-                    <div class="card-body text-center">
-                        <h5 class="card-title custom-card-title">
-                            <a class="custom-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </h5>
-                        <p class="card-text"><?php the_content(); ?></p>
+                <a href="<?php echo esc_url(home_url('/' . $post_slug)); ?>" class="card-link">
+                    <div class="card mb-4 mx-auto border-0" style="width: 350px; height: 550px; position: relative;">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>" alt="<?php the_title(); ?>" class="card-img-top">
+                        <?php endif; ?>
+                        <div class="card-body text-center">
+                            <h5 class="card-title custom-card-title">
+                                <?php the_title(); ?>
+                            </h5>
+                            <p class="card-text"><?php the_content(); ?></p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         <?php
         endwhile;
-        wp_reset_postdata();
+
         ?>
-    </div>
-</div>
+        </div>
+        </div>
+        
 
 
 <!-- CARD POD&LIVRE -->
@@ -142,6 +153,7 @@ foreach ($custom_post_types as $post_type) {
     );
 
     $custom_list = new WP_Query($args_custom);
+    $post_slug = get_post_field('post_name', get_the_ID());
 
     if ($custom_list->have_posts()) :
         while ($custom_list->have_posts()) : $custom_list->the_post();
@@ -153,8 +165,12 @@ foreach ($custom_post_types as $post_type) {
 
             $content = get_the_content();
             if (stripos($content, $post_type) !== false) {
+
+                $post_slug = get_post_field('post_name', get_the_ID());
                 ?>
-                <div class="card mx-auto mb-6 rounded-0 border-0" style="max-width: 1300px; height: 499px; margin: 70px 0;">
+
+                
+                <div class="card mx-auto mb-6 rounded-0 border-0" style="max-width: 1300px; height: 497px; 0;">
                     <div class="row g-0 align-items-center">
                         <?php if ($counter % 2 !== 0) : ?>
                             <div class="col-md-6">
@@ -162,15 +178,19 @@ foreach ($custom_post_types as $post_type) {
                                     <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
                                 <?php endif; ?>
                             </div>
-                        <?php endif; ?>
-                        <div class="col-md-6">
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-4"><?php the_title(); ?></h5>
-                                <p class="card-text"><?php the_content(); ?></p>
-                            </div>
-                            <button type="submit" class="btn btn-custom" name="validate"><span>Lire plus</span></button>
+                            <?php endif; ?>
+                    <div class="col-md-6">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-4"><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_content(); ?></p>
+                            <?php if ($post_type === 'livres') : ?>
+                                <a href="<?php echo esc_url(home_url('/' . $post_slug)); ?>" class="btn btn-custom" name="validate">
+                                    <span>Lire plus</span>
+                                </a>
+                            <?php endif; ?>
                         </div>
-                        <?php if ($counter % 2 === 0) : ?>
+                    </div>
+                    <?php if ($counter % 2 === 0) : ?>
                             <div class="col-md-6">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid rounded-0" alt="...">
@@ -184,7 +204,7 @@ foreach ($custom_post_types as $post_type) {
             }
         endwhile;
     endif;
-    wp_reset_postdata();
+    
 }
 ?>
 
@@ -192,7 +212,7 @@ foreach ($custom_post_types as $post_type) {
 
 <div class="container">
 
-    <div id="testimonialsCarousel" class="carousel slide partial-visible-carousel">
+    <div id="testimonialsCarousel" class="carousel slide">
         <div class="carousel-indicators">
             <?php
             $testimonialsList = new WP_Query([
@@ -222,6 +242,7 @@ foreach ($custom_post_types as $post_type) {
             $item_index = 0;
 
             while ($testimonialsList->have_posts()) : $testimonialsList->the_post();
+            $post_slug = get_post_field('post_name', get_the_ID());
             ?>
                 <div class="carousel-item <?php echo ($item_index === 0) ? 'active' : ''; ?>">
                     <div class="card mx-auto mb-3 rounded-0 border-0" style="max-width: 700px; height: 350px; margin: 70px auto;">
@@ -237,7 +258,12 @@ foreach ($custom_post_types as $post_type) {
                                 <div class="card-body">
                                     <h5 class="card-title mb-4"><?php the_title(); ?></h5>
                                     <p class="card-text"><?php the_content(); ?></p>
-                                    
+                                    <div class="btn-container text-center">
+                                    <a href="<?php echo esc_url(home_url('/' . $post_slug)); ?>" class="btn btn-custom" name="validate">
+                                <span>Témoigner</span>
+                            </a>
+        </button>
+    </div>
                                 </div>
                             </div>
                         </div>
@@ -251,14 +277,15 @@ foreach ($custom_post_types as $post_type) {
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" style="background-color: #8f965f;"aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" style="background-color: #8f965f;" aria-hidden="true"></span>
+            <span class="visually-hidden" >Next</span>
         </button>
     </div>
+    
 
 </div>
 </div>

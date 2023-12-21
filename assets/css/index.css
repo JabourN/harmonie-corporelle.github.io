@@ -76,27 +76,6 @@ body{
     margin-bottom: 10px; /* Ajoutez des marges selon vos préférences */
 }
 
-.partial-visible-carousel .carousel-inner {
-    display: flex;
-}
-
-.partial-visible-carousel .carousel-item {
-    transition: transform 0.5s ease;
-}
-
-.partial-visible-carousel .carousel-item-next,
-.partial-visible-carousel .carousel-item-prev,
-.partial-visible-carousel .carousel-item.active {
-    transform: translateX(0);
-}
-
-.partial-visible-carousel .carousel-item-next {
-    transform: translateX(25%); /* Ajustez le pourcentage selon vos besoins */
-}
-
-.partial-visible-carousel .carousel-item-prev {
-    transform: translateX(-25%); /* Ajustez le pourcentage selon vos besoins */
-}
 
 .custom-link {
     text-decoration: none; /* Désactive le soulignement */
@@ -106,6 +85,7 @@ body{
 #testimonialsCarousel {
     margin: 30px;
 }
+
 
   
 /* PAGE D'IMC */

@@ -35,7 +35,6 @@ function montheme_menu_link_class($attrs) {
 add_filter('nav_menu_css_class', 'montheme_menu_class');
 add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
 
-// ACCUEIL
 
 function create_accueil_posttypes() {
     register_post_type('accueil', [

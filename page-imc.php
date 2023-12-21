@@ -101,11 +101,6 @@
                     </tr> 
                 </tbody>
             </table>
-            <!-- Bouton Sauvegarde -->
-            <div class="btn-container text-center">
-                        <button class="btn btn-custom" id="btnSauvegarde" value="Sauvegarde" ><span>Sauvegarder</span></button>
-           <!--  <div class="text-center">
-            <i><input type="button" id="btnSauvegarde" value="Sauvegarde" class="btn btn-custom"/></i> -->
             
             </div>
         </div>

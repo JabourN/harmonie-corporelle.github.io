@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /** Template Name: Résultats */ get_header(); ?>
 
 <div class="container mt-4">
     <div class="row justify-content-center">
