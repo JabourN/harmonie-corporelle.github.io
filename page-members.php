@@ -1,4 +1,4 @@
-<?php /** Template Name: groups */ get_header(); ?>
+<?php /** Template Name: members */ get_header(); ?>
 
 <?php while (have_posts()) : the_post();
 ?>
