@@ -1,86 +1,56 @@
-<?php get_header();?>
-
+<?php 
+    session_start();
+    require('actions/Questions/showAllQuestionsAction.php');
+?>
+<?php get_header(); ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        main {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        #topics, #comments {
-            width: 45%;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <title>Mon Forum</title>
-</head>
+<?php include 'includes/head.php'; ?>
 <body>
-    <header>
-        <h1>Mon Forum</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="profile.php">Profil</a></li>
-                <li><a href="messages.php">Messages</a></li>
-                <li><a href="logout.php">Déconnexion</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'includes/navbar.php'; ?>
+    <br><br>
 
-    <main>
-        <section id="topics">
-            <!-- Afficher la liste des sujets -->
-        </section>
+    <div class="container">
+    
+        <form method="GET">
 
-        <section id="comments">
-            <!-- Afficher les commentaires du sujet sélectionné -->
-        </section>
-    </main>
+            <div class="form-group row">
 
-    <footer>
-        <p>&copy; 2023 Mon Forum</p>
-    </footer>
+                <div class="col-8">
+                    <input type="search" name="search" class="form-control">
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-success" type="submit">Rechercher</button>
+                </div>
+
+            </div>
+        </form>
+
+        <br>
+
+        <?php 
+            while($question = $getAllQuestions->fetch()){
+                ?>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="article.php?id=<?= $question['id']; ?>">
+                            <?= $question['title']; ?>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <?= $question['description']; ?>
+                    </div>
+                    <div class="card-footer">
+                        Publié par <a href="http://localhost:8888/harmonie-corporelle/profil/?id=<?= $question['id_author']; ?>"><?= $question['pseudo_author']; ?></a> le <?= $question['date_publication']; ?>
+                    </div>
+                </div>
+                <br>
+                <?php
+            }
+        ?>
+
+    </div>
+
 </body>
 </html>
-<?php get_footer();?>
+<?php get_footer(); ?>
