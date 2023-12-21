@@ -1,7 +1,8 @@
 <?php 
     session_start(); 
-    require('actions/Utilisateurs/showOneUsersProfileAction.php');
+    require('actions/Utilisateurs/showOneUsersProfileAction.php');   
 ?>
+<?php get_header(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
@@ -31,27 +32,23 @@
                         ?>
                         <div class="card">
                             <div class="card-header">
-                                <?= $question['title']; ?>
+                                <?= $question['titre']; ?>
                             </div>
                             <div class="card-body">
                                 <?= $question['description']; ?>
                             </div>
                             <div class="card-footer">
-                                Par <?= $question['pseudo_author']; ?> le <?= $question['date_publication'];  ?>
+                                Par <?= $question['pseudo_auteur']; ?> le <?= $question['date_publication'];  ?>
                             </div>
                         </div>
                         <br>
                         <?php
                     }
                 }
-            // Ajouter le bouton de déconnexion
-            echo '<form action="actions/Utilisateurs/deconnexion.php" method="post">';
-            echo '    <button type="submit" name="deconnexion">Déconnexion</button>';
-            echo '</form>';
 
             } else {
                 // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
-                header('Location: http://localhost:8888/harmonie-corporelle/connexion');
+                header('Location: actions/Utilisateurs/page-connexion.php');
                 exit();
             }
         ?>  
@@ -59,3 +56,4 @@
 
 </body>
 </html>
+<?php get_footer(); ?>
