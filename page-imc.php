@@ -18,7 +18,7 @@
                         <?php if (has_post_thumbnail()) : ?>
                             <!-- Ajoutez ici votre code pour l'image -->
                         <?php endif; ?>
-                        <div class="card-body text-center" style="margin-top: 20px;">
+                        <div class="card-body text-center">
                             <h5><?php the_title(); ?></h5>
                             <p class="card-text"><?php the_content(); ?></p>
                         </div>
@@ -61,7 +61,7 @@
         
         <!-- Card 2 : Descriptions et Poids Maximum -->
         <div class="col-md-6 mb-4">
-                <div class="card carte-verte1" style="width: 600px;">
+                <div class="card carte-verte1" >
                     <div class="card-body">
                     <table class="table">
                         <thead>
@@ -102,8 +102,11 @@
                 </tbody>
             </table>
             <!-- Bouton Sauvegarde -->
-            <div class="text-center">
-            <i><input type="button" id="btnSauvegarde" value="Sauvegarde" class="btn btn-custom"/></i>
+            <div class="btn-container text-center">
+                        <button class="btn btn-custom" id="btnSauvegarde" value="Sauvegarde" ><span>Sauvegarder</span></button>
+           <!--  <div class="text-center">
+            <i><input type="button" id="btnSauvegarde" value="Sauvegarde" class="btn btn-custom"/></i> -->
+            
             </div>
         </div>
     </div>

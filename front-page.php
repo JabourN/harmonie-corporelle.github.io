@@ -3,7 +3,6 @@ get_header();
 ?>
 
 <!-- CARROUSEL 1-->
-<h1>JE LA FRONT PAGE</h1>
 
 <div class="container">
 
@@ -156,7 +155,7 @@ foreach ($custom_post_types as $post_type) {
             $content = get_the_content();
             if (stripos($content, $post_type) !== false) {
                 ?>
-                <div class="card mx-auto mb-6 rounded-0 border-0" style="max-width: 1300px; height: 499px; margin: 70px 0;">
+                <div class="card mx-auto mb-6 rounded-0 border-0" style="max-width: 1300px; height: 497px; margin: 50px 0;">
                     <div class="row g-0 align-items-center">
                         <?php if ($counter % 2 !== 0) : ?>
                             <div class="col-md-6">
@@ -239,7 +238,11 @@ foreach ($custom_post_types as $post_type) {
                                 <div class="card-body">
                                     <h5 class="card-title mb-4"><?php the_title(); ?></h5>
                                     <p class="card-text"><?php the_content(); ?></p>
-                                    
+                                    <div class="btn-container text-center">
+        <button type="submit" class="btn btn-custom" name="validate">
+            <span>Témoigner</span>
+        </button>
+    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,6 +264,7 @@ foreach ($custom_post_types as $post_type) {
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    
 
 </div>
 </div>

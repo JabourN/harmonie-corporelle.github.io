@@ -3,11 +3,10 @@ get_header();
 ?>
 
 <!-- CARROUSEL 1-->
-<h1>JE SUIS BIEN LA</h1>
 
 <div class="container">
 
-    <div id="carouselExampleIndicators" class="carousel slide partial-visible-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <?php
             $post_types = array('IMC', 'Sondage', 'Forum');
@@ -26,7 +25,6 @@ get_header();
                         $content = get_the_content();
                         if (stripos($content, $post_type) !== false) {
                             ?>
-                            
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $indicator_index; ?>" <?php echo ($indicator_index === 0) ? 'class="active"' : ''; ?> aria-label="Slide <?php echo $indicator_index + 1; ?>"></button>
                             <?php
                             $indicator_index++;
